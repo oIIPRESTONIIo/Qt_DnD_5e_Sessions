@@ -79,6 +79,8 @@ private slots:
     void on_comboBox_Performance_activated(const QString &arg1);
     void on_comboBox_Persuasion_activated(const QString &arg1);
     void on_comboBox_Intimidation_activated(const QString &arg1);
+    void on_lineEdit_CurrentHP_textChanged(const QString &arg1);
+    void on_lineEdit_MaximumHP_textChanged(const QString &arg1);
 };
 
 #endif // MAINWINDOW_H

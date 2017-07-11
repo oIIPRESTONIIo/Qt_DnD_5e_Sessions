@@ -950,3 +950,18 @@ void MainWindow::on_lineEdit_CharLevel_textChanged(const QString &arg1)
 {
   setProficiencyBonus(arg1);
 }
+
+void MainWindow::on_lineEdit_CurrentHP_textChanged(const QString &arg1)
+{
+    if (arg1.toInt() > ui->lineEdit_MaximumHP->text().toInt()) {
+        ui->lineEdit_CurrentHP->setText(Braum.getCurrentHP());
+    }
+    else {
+        Braum.setCurrentHP(arg1);
+    }
+}
+
+void MainWindow::on_lineEdit_MaximumHP_textChanged(const QString &arg1)
+{
+    Braum.setMaximumHP(arg1);
+}
