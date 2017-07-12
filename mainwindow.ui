@@ -14,9 +14,42 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralWidget">
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
+   </property>
    <layout class="QGridLayout" name="gridLayout">
     <item row="0" column="0">
      <widget class="QTabWidget" name="tabWidget_MainMenu">
+      <property name="font">
+       <font>
+        <family>Nirmala UI</family>
+        <pointsize>10</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="contextMenuPolicy">
+       <enum>Qt::DefaultContextMenu</enum>
+      </property>
+      <property name="toolTipDuration">
+       <number>0</number>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QTabBar::tab {
+
+background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);
+
+}
+
+QTabBar::tab:selected {
+
+background-color: rgb(76, 76 , 76);
+color: rgb(255, 255, 255);
+
+}
+</string>
+      </property>
       <property name="tabPosition">
        <enum>QTabWidget::North</enum>
       </property>
@@ -41,6 +74,27 @@
           <height>676</height>
          </rect>
         </property>
+        <property name="font">
+         <font>
+          <family>Nirmala UI</family>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QTabBar::tab {
+
+background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);
+
+}
+
+QTabBar::tab:selected {
+
+background-color: rgb(76, 76 , 76);
+color: rgb(255, 255, 255);
+
+}</string>
+        </property>
         <property name="tabPosition">
          <enum>QTabWidget::South</enum>
         </property>
@@ -48,7 +102,7 @@
          <enum>QTabWidget::Rounded</enum>
         </property>
         <property name="currentIndex">
-         <number>0</number>
+         <number>1</number>
         </property>
         <property name="iconSize">
          <size>
@@ -89,6 +143,12 @@
                   </property>
                   <item>
                    <widget class="QLabel" name="label_CharName">
+                    <property name="font">
+                     <font>
+                      <family>Nirmala UI</family>
+                      <pointsize>8</pointsize>
+                     </font>
+                    </property>
                     <property name="text">
                      <string>Character</string>
                     </property>
@@ -132,6 +192,12 @@
                   </property>
                   <item>
                    <widget class="QLabel" name="label_PlayerName">
+                    <property name="font">
+                     <font>
+                      <family>Nirmala UI</family>
+                      <pointsize>8</pointsize>
+                     </font>
+                    </property>
                     <property name="text">
                      <string>Player</string>
                     </property>
@@ -175,6 +241,12 @@
                   </property>
                   <item>
                    <widget class="QLabel" name="label_CharClass">
+                    <property name="font">
+                     <font>
+                      <family>Nirmala UI</family>
+                      <pointsize>8</pointsize>
+                     </font>
+                    </property>
                     <property name="text">
                      <string>Class</string>
                     </property>
@@ -225,6 +297,12 @@
                   </property>
                   <item>
                    <widget class="QLabel" name="label_CharRace">
+                    <property name="font">
+                     <font>
+                      <family>Nirmala UI</family>
+                      <pointsize>8</pointsize>
+                     </font>
+                    </property>
                     <property name="text">
                      <string>Race</string>
                     </property>
@@ -268,6 +346,12 @@
                   </property>
                   <item>
                    <widget class="QLabel" name="label_Alignment">
+                    <property name="font">
+                     <font>
+                      <family>Nirmala UI</family>
+                      <pointsize>8</pointsize>
+                     </font>
+                    </property>
                     <property name="text">
                      <string>Alignment</string>
                     </property>
@@ -311,6 +395,12 @@
                   </property>
                   <item>
                    <widget class="QLabel" name="label_Size">
+                    <property name="font">
+                     <font>
+                      <family>Nirmala UI</family>
+                      <pointsize>8</pointsize>
+                     </font>
+                    </property>
                     <property name="text">
                      <string>Size</string>
                     </property>
@@ -352,7 +442,7 @@
              </layout>
             </item>
             <item>
-             <layout class="QHBoxLayout" name="scoreSkillsLayout" stretch="1,1">
+             <layout class="QHBoxLayout" name="scoresSkillsLayout" stretch="1,1">
               <property name="spacing">
                <number>0</number>
               </property>
@@ -376,6 +466,12 @@
                       <enum>Qt::Vertical</enum>
                      </property>
                      <widget class="QLabel" name="label_Str">
+                      <property name="font">
+                       <font>
+                        <family>Nirmala UI</family>
+                        <pointsize>8</pointsize>
+                       </font>
+                      </property>
                       <property name="text">
                        <string>Strength</string>
                       </property>
@@ -454,6 +550,12 @@
                       <enum>Qt::Vertical</enum>
                      </property>
                      <widget class="QLabel" name="label_Dex">
+                      <property name="font">
+                       <font>
+                        <family>Nirmala UI</family>
+                        <pointsize>8</pointsize>
+                       </font>
+                      </property>
                       <property name="text">
                        <string>Dexterity</string>
                       </property>
@@ -532,6 +634,12 @@
                       <enum>Qt::Vertical</enum>
                      </property>
                      <widget class="QLabel" name="label_Con">
+                      <property name="font">
+                       <font>
+                        <family>Nirmala UI</family>
+                        <pointsize>8</pointsize>
+                       </font>
+                      </property>
                       <property name="text">
                        <string>Constitution</string>
                       </property>
@@ -610,6 +718,12 @@
                       <enum>Qt::Vertical</enum>
                      </property>
                      <widget class="QLabel" name="label_Int">
+                      <property name="font">
+                       <font>
+                        <family>Nirmala UI</family>
+                        <pointsize>8</pointsize>
+                       </font>
+                      </property>
                       <property name="text">
                        <string>Intelligence</string>
                       </property>
@@ -688,6 +802,12 @@
                       <enum>Qt::Vertical</enum>
                      </property>
                      <widget class="QLabel" name="label_Wis">
+                      <property name="font">
+                       <font>
+                        <family>Nirmala UI</family>
+                        <pointsize>8</pointsize>
+                       </font>
+                      </property>
                       <property name="text">
                        <string>Wisdom</string>
                       </property>
@@ -766,6 +886,12 @@
                       <enum>Qt::Vertical</enum>
                      </property>
                      <widget class="QLabel" name="label_Cha">
+                      <property name="font">
+                       <font>
+                        <family>Nirmala UI</family>
+                        <pointsize>8</pointsize>
+                       </font>
+                      </property>
                       <property name="text">
                        <string>Charisma</string>
                       </property>
@@ -851,6 +977,12 @@
                       <enum>Qt::Vertical</enum>
                      </property>
                      <widget class="QLabel" name="label_CharLevel">
+                      <property name="font">
+                       <font>
+                        <family>Nirmala UI</family>
+                        <pointsize>8</pointsize>
+                       </font>
+                      </property>
                       <property name="text">
                        <string>Level</string>
                       </property>
@@ -894,6 +1026,12 @@
                       <enum>Qt::Vertical</enum>
                      </property>
                      <widget class="QLabel" name="label_Proficiency">
+                      <property name="font">
+                       <font>
+                        <family>Nirmala UI</family>
+                        <pointsize>8</pointsize>
+                       </font>
+                      </property>
                       <property name="text">
                        <string>Proficiency</string>
                       </property>
@@ -937,6 +1075,12 @@
                       <enum>Qt::Vertical</enum>
                      </property>
                      <widget class="QLabel" name="label_ArmorClass">
+                      <property name="font">
+                       <font>
+                        <family>Nirmala UI</family>
+                        <pointsize>8</pointsize>
+                       </font>
+                      </property>
                       <property name="text">
                        <string>Armor Class</string>
                       </property>
@@ -980,6 +1124,12 @@
                       <enum>Qt::Vertical</enum>
                      </property>
                      <widget class="QLabel" name="label_Initiative">
+                      <property name="font">
+                       <font>
+                        <family>Nirmala UI</family>
+                        <pointsize>8</pointsize>
+                       </font>
+                      </property>
                       <property name="text">
                        <string>Initiative</string>
                       </property>
@@ -1020,6 +1170,12 @@
                       <enum>Qt::Vertical</enum>
                      </property>
                      <widget class="QLabel" name="label_Speed">
+                      <property name="font">
+                       <font>
+                        <family>Nirmala UI</family>
+                        <pointsize>8</pointsize>
+                       </font>
+                      </property>
                       <property name="text">
                        <string>Speed</string>
                       </property>
@@ -1063,6 +1219,12 @@
                       <enum>Qt::Vertical</enum>
                      </property>
                      <widget class="QLabel" name="label_Experience">
+                      <property name="font">
+                       <font>
+                        <family>Nirmala UI</family>
+                        <pointsize>8</pointsize>
+                       </font>
+                      </property>
                       <property name="text">
                        <string>Experience</string>
                       </property>
@@ -1114,6 +1276,12 @@
                    <number>0</number>
                   </property>
                   <widget class="QLabel" name="label_AdditionalProficiencies">
+                   <property name="font">
+                    <font>
+                     <family>Nirmala UI</family>
+                     <pointsize>8</pointsize>
+                    </font>
+                   </property>
                    <property name="text">
                     <string>Additional Proficiencies</string>
                    </property>
@@ -1131,7 +1299,7 @@
                </layout>
               </item>
               <item>
-               <layout class="QVBoxLayout" name="rightHandLayout">
+               <layout class="QVBoxLayout" name="rightHandLayout" stretch="1,1,1,1">
                 <property name="spacing">
                  <number>0</number>
                 </property>
@@ -1143,6 +1311,12 @@
                     <verstretch>1</verstretch>
                    </sizepolicy>
                   </property>
+                  <property name="font">
+                   <font>
+                    <family>Nirmala UI</family>
+                    <pointsize>8</pointsize>
+                   </font>
+                  </property>
                   <property name="text">
                    <string>Saving Throws</string>
                   </property>
@@ -1152,7 +1326,7 @@
                  </widget>
                 </item>
                 <item>
-                 <layout class="QHBoxLayout" name="savesLayout">
+                 <layout class="QHBoxLayout" name="savesLayout" stretch="1,1,1">
                   <property name="spacing">
                    <number>0</number>
                   </property>
@@ -1667,6 +1841,12 @@ border-color: rgb(210, 201, 210);</string>
                         <verstretch>1</verstretch>
                        </sizepolicy>
                       </property>
+                      <property name="font">
+                       <font>
+                        <family>Nirmala UI</family>
+                        <pointsize>8</pointsize>
+                       </font>
+                      </property>
                       <property name="text">
                        <string>Strength</string>
                       </property>
@@ -1682,6 +1862,12 @@ border-color: rgb(210, 201, 210);</string>
                         <horstretch>1</horstretch>
                         <verstretch>1</verstretch>
                        </sizepolicy>
+                      </property>
+                      <property name="font">
+                       <font>
+                        <family>Nirmala UI</family>
+                        <pointsize>8</pointsize>
+                       </font>
                       </property>
                       <property name="text">
                        <string>Dexterity</string>
@@ -1699,6 +1885,12 @@ border-color: rgb(210, 201, 210);</string>
                         <verstretch>1</verstretch>
                        </sizepolicy>
                       </property>
+                      <property name="font">
+                       <font>
+                        <family>Nirmala UI</family>
+                        <pointsize>8</pointsize>
+                       </font>
+                      </property>
                       <property name="text">
                        <string>Constitution</string>
                       </property>
@@ -1714,6 +1906,12 @@ border-color: rgb(210, 201, 210);</string>
                         <horstretch>1</horstretch>
                         <verstretch>1</verstretch>
                        </sizepolicy>
+                      </property>
+                      <property name="font">
+                       <font>
+                        <family>Nirmala UI</family>
+                        <pointsize>8</pointsize>
+                       </font>
                       </property>
                       <property name="text">
                        <string>Intelligence</string>
@@ -1731,6 +1929,12 @@ border-color: rgb(210, 201, 210);</string>
                         <verstretch>1</verstretch>
                        </sizepolicy>
                       </property>
+                      <property name="font">
+                       <font>
+                        <family>Nirmala UI</family>
+                        <pointsize>8</pointsize>
+                       </font>
+                      </property>
                       <property name="text">
                        <string>Wisdom</string>
                       </property>
@@ -1746,6 +1950,12 @@ border-color: rgb(210, 201, 210);</string>
                         <horstretch>1</horstretch>
                         <verstretch>1</verstretch>
                        </sizepolicy>
+                      </property>
+                      <property name="font">
+                       <font>
+                        <family>Nirmala UI</family>
+                        <pointsize>8</pointsize>
+                       </font>
                       </property>
                       <property name="text">
                        <string>Charisma</string>
@@ -1767,6 +1977,12 @@ border-color: rgb(210, 201, 210);</string>
                     <verstretch>1</verstretch>
                    </sizepolicy>
                   </property>
+                  <property name="font">
+                   <font>
+                    <family>Nirmala UI</family>
+                    <pointsize>8</pointsize>
+                   </font>
+                  </property>
                   <property name="lineWidth">
                    <number>0</number>
                   </property>
@@ -1779,19 +1995,19 @@ border-color: rgb(210, 201, 210);</string>
                  </widget>
                 </item>
                 <item>
-                 <layout class="QHBoxLayout" name="skillsLayout">
+                 <layout class="QHBoxLayout" name="skillsLayout" stretch="1,1,1">
                   <property name="spacing">
                    <number>0</number>
                   </property>
                   <item>
-                   <layout class="QVBoxLayout" name="skillsComboBoxLayout">
+                   <layout class="QVBoxLayout" name="skillsComboBoxLayout" stretch="1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1">
                     <property name="spacing">
                      <number>0</number>
                     </property>
                     <item>
                      <widget class="QComboBox" name="comboBox_Acrobatics">
                       <property name="sizePolicy">
-                       <sizepolicy hsizetype="Expanding" vsizetype="MinimumExpanding">
+                       <sizepolicy hsizetype="Minimum" vsizetype="MinimumExpanding">
                         <horstretch>0</horstretch>
                         <verstretch>0</verstretch>
                        </sizepolicy>
@@ -1829,7 +2045,7 @@ border-color: rgb(210, 201, 210);</string>
                     <item>
                      <widget class="QComboBox" name="comboBox_AnimalHandling">
                       <property name="sizePolicy">
-                       <sizepolicy hsizetype="Expanding" vsizetype="MinimumExpanding">
+                       <sizepolicy hsizetype="Minimum" vsizetype="MinimumExpanding">
                         <horstretch>0</horstretch>
                         <verstretch>0</verstretch>
                        </sizepolicy>
@@ -1867,7 +2083,7 @@ border-color: rgb(210, 201, 210);</string>
                     <item>
                      <widget class="QComboBox" name="comboBox_Arcana">
                       <property name="sizePolicy">
-                       <sizepolicy hsizetype="Expanding" vsizetype="MinimumExpanding">
+                       <sizepolicy hsizetype="Minimum" vsizetype="MinimumExpanding">
                         <horstretch>0</horstretch>
                         <verstretch>0</verstretch>
                        </sizepolicy>
@@ -1905,7 +2121,7 @@ border-color: rgb(210, 201, 210);</string>
                     <item>
                      <widget class="QComboBox" name="comboBox_Athletics">
                       <property name="sizePolicy">
-                       <sizepolicy hsizetype="Expanding" vsizetype="MinimumExpanding">
+                       <sizepolicy hsizetype="Minimum" vsizetype="MinimumExpanding">
                         <horstretch>0</horstretch>
                         <verstretch>0</verstretch>
                        </sizepolicy>
@@ -1943,7 +2159,7 @@ border-color: rgb(210, 201, 210);</string>
                     <item>
                      <widget class="QComboBox" name="comboBox_Deception">
                       <property name="sizePolicy">
-                       <sizepolicy hsizetype="Expanding" vsizetype="MinimumExpanding">
+                       <sizepolicy hsizetype="Minimum" vsizetype="MinimumExpanding">
                         <horstretch>0</horstretch>
                         <verstretch>0</verstretch>
                        </sizepolicy>
@@ -1981,7 +2197,7 @@ border-color: rgb(210, 201, 210);</string>
                     <item>
                      <widget class="QComboBox" name="comboBox_History">
                       <property name="sizePolicy">
-                       <sizepolicy hsizetype="Expanding" vsizetype="MinimumExpanding">
+                       <sizepolicy hsizetype="Minimum" vsizetype="MinimumExpanding">
                         <horstretch>0</horstretch>
                         <verstretch>0</verstretch>
                        </sizepolicy>
@@ -2019,7 +2235,7 @@ border-color: rgb(210, 201, 210);</string>
                     <item>
                      <widget class="QComboBox" name="comboBox_Insight">
                       <property name="sizePolicy">
-                       <sizepolicy hsizetype="Expanding" vsizetype="MinimumExpanding">
+                       <sizepolicy hsizetype="Minimum" vsizetype="MinimumExpanding">
                         <horstretch>0</horstretch>
                         <verstretch>0</verstretch>
                        </sizepolicy>
@@ -2057,7 +2273,7 @@ border-color: rgb(210, 201, 210);</string>
                     <item>
                      <widget class="QComboBox" name="comboBox_Intimidation">
                       <property name="sizePolicy">
-                       <sizepolicy hsizetype="Expanding" vsizetype="MinimumExpanding">
+                       <sizepolicy hsizetype="Minimum" vsizetype="MinimumExpanding">
                         <horstretch>0</horstretch>
                         <verstretch>0</verstretch>
                        </sizepolicy>
@@ -2095,7 +2311,7 @@ border-color: rgb(210, 201, 210);</string>
                     <item>
                      <widget class="QComboBox" name="comboBox_Investigation">
                       <property name="sizePolicy">
-                       <sizepolicy hsizetype="Expanding" vsizetype="MinimumExpanding">
+                       <sizepolicy hsizetype="Minimum" vsizetype="MinimumExpanding">
                         <horstretch>0</horstretch>
                         <verstretch>0</verstretch>
                        </sizepolicy>
@@ -2133,7 +2349,7 @@ border-color: rgb(210, 201, 210);</string>
                     <item>
                      <widget class="QComboBox" name="comboBox_Medicine">
                       <property name="sizePolicy">
-                       <sizepolicy hsizetype="Expanding" vsizetype="MinimumExpanding">
+                       <sizepolicy hsizetype="Minimum" vsizetype="MinimumExpanding">
                         <horstretch>0</horstretch>
                         <verstretch>0</verstretch>
                        </sizepolicy>
@@ -2171,7 +2387,7 @@ border-color: rgb(210, 201, 210);</string>
                     <item>
                      <widget class="QComboBox" name="comboBox_Nature">
                       <property name="sizePolicy">
-                       <sizepolicy hsizetype="Expanding" vsizetype="MinimumExpanding">
+                       <sizepolicy hsizetype="Minimum" vsizetype="MinimumExpanding">
                         <horstretch>0</horstretch>
                         <verstretch>0</verstretch>
                        </sizepolicy>
@@ -2209,7 +2425,7 @@ border-color: rgb(210, 201, 210);</string>
                     <item>
                      <widget class="QComboBox" name="comboBox_Perception">
                       <property name="sizePolicy">
-                       <sizepolicy hsizetype="Expanding" vsizetype="MinimumExpanding">
+                       <sizepolicy hsizetype="Minimum" vsizetype="MinimumExpanding">
                         <horstretch>0</horstretch>
                         <verstretch>0</verstretch>
                        </sizepolicy>
@@ -2247,7 +2463,7 @@ border-color: rgb(210, 201, 210);</string>
                     <item>
                      <widget class="QComboBox" name="comboBox_Performance">
                       <property name="sizePolicy">
-                       <sizepolicy hsizetype="Expanding" vsizetype="MinimumExpanding">
+                       <sizepolicy hsizetype="Minimum" vsizetype="MinimumExpanding">
                         <horstretch>0</horstretch>
                         <verstretch>0</verstretch>
                        </sizepolicy>
@@ -2285,7 +2501,7 @@ border-color: rgb(210, 201, 210);</string>
                     <item>
                      <widget class="QComboBox" name="comboBox_Persuasion">
                       <property name="sizePolicy">
-                       <sizepolicy hsizetype="Expanding" vsizetype="MinimumExpanding">
+                       <sizepolicy hsizetype="Minimum" vsizetype="MinimumExpanding">
                         <horstretch>0</horstretch>
                         <verstretch>0</verstretch>
                        </sizepolicy>
@@ -2323,7 +2539,7 @@ border-color: rgb(210, 201, 210);</string>
                     <item>
                      <widget class="QComboBox" name="comboBox_Religion">
                       <property name="sizePolicy">
-                       <sizepolicy hsizetype="Expanding" vsizetype="MinimumExpanding">
+                       <sizepolicy hsizetype="Minimum" vsizetype="MinimumExpanding">
                         <horstretch>0</horstretch>
                         <verstretch>0</verstretch>
                        </sizepolicy>
@@ -2361,7 +2577,7 @@ border-color: rgb(210, 201, 210);</string>
                     <item>
                      <widget class="QComboBox" name="comboBox_SleightOfHand">
                       <property name="sizePolicy">
-                       <sizepolicy hsizetype="Expanding" vsizetype="MinimumExpanding">
+                       <sizepolicy hsizetype="Minimum" vsizetype="MinimumExpanding">
                         <horstretch>0</horstretch>
                         <verstretch>0</verstretch>
                        </sizepolicy>
@@ -2399,7 +2615,7 @@ border-color: rgb(210, 201, 210);</string>
                     <item>
                      <widget class="QComboBox" name="comboBox_Stealth">
                       <property name="sizePolicy">
-                       <sizepolicy hsizetype="Expanding" vsizetype="MinimumExpanding">
+                       <sizepolicy hsizetype="Minimum" vsizetype="MinimumExpanding">
                         <horstretch>0</horstretch>
                         <verstretch>0</verstretch>
                        </sizepolicy>
@@ -2437,7 +2653,7 @@ border-color: rgb(210, 201, 210);</string>
                     <item>
                      <widget class="QComboBox" name="comboBox_Survival">
                       <property name="sizePolicy">
-                       <sizepolicy hsizetype="Expanding" vsizetype="MinimumExpanding">
+                       <sizepolicy hsizetype="Minimum" vsizetype="MinimumExpanding">
                         <horstretch>0</horstretch>
                         <verstretch>0</verstretch>
                        </sizepolicy>
@@ -2475,7 +2691,7 @@ border-color: rgb(210, 201, 210);</string>
                    </layout>
                   </item>
                   <item>
-                   <layout class="QVBoxLayout" name="skillsValueLayout">
+                   <layout class="QVBoxLayout" name="skillsValueLayout" stretch="1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1">
                     <property name="spacing">
                      <number>0</number>
                     </property>
@@ -3238,7 +3454,7 @@ border-color: rgb(210, 201, 210);</string>
                    </layout>
                   </item>
                   <item>
-                   <layout class="QVBoxLayout" name="skillsLabelLayout">
+                   <layout class="QVBoxLayout" name="skillsLabelLayout" stretch="1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1">
                     <property name="spacing">
                      <number>0</number>
                     </property>
@@ -3249,6 +3465,12 @@ border-color: rgb(210, 201, 210);</string>
                         <horstretch>0</horstretch>
                         <verstretch>0</verstretch>
                        </sizepolicy>
+                      </property>
+                      <property name="font">
+                       <font>
+                        <family>Nirmala UI</family>
+                        <pointsize>8</pointsize>
+                       </font>
                       </property>
                       <property name="text">
                        <string>Acrobatics</string>
@@ -3266,6 +3488,12 @@ border-color: rgb(210, 201, 210);</string>
                         <verstretch>0</verstretch>
                        </sizepolicy>
                       </property>
+                      <property name="font">
+                       <font>
+                        <family>Nirmala UI</family>
+                        <pointsize>8</pointsize>
+                       </font>
+                      </property>
                       <property name="text">
                        <string>Animal Handling</string>
                       </property>
@@ -3281,6 +3509,12 @@ border-color: rgb(210, 201, 210);</string>
                         <horstretch>0</horstretch>
                         <verstretch>0</verstretch>
                        </sizepolicy>
+                      </property>
+                      <property name="font">
+                       <font>
+                        <family>Nirmala UI</family>
+                        <pointsize>8</pointsize>
+                       </font>
                       </property>
                       <property name="text">
                        <string>Arcana</string>
@@ -3298,6 +3532,12 @@ border-color: rgb(210, 201, 210);</string>
                         <verstretch>0</verstretch>
                        </sizepolicy>
                       </property>
+                      <property name="font">
+                       <font>
+                        <family>Nirmala UI</family>
+                        <pointsize>8</pointsize>
+                       </font>
+                      </property>
                       <property name="text">
                        <string>Athletics</string>
                       </property>
@@ -3313,6 +3553,12 @@ border-color: rgb(210, 201, 210);</string>
                         <horstretch>0</horstretch>
                         <verstretch>0</verstretch>
                        </sizepolicy>
+                      </property>
+                      <property name="font">
+                       <font>
+                        <family>Nirmala UI</family>
+                        <pointsize>8</pointsize>
+                       </font>
                       </property>
                       <property name="text">
                        <string>Deception</string>
@@ -3330,6 +3576,12 @@ border-color: rgb(210, 201, 210);</string>
                         <verstretch>0</verstretch>
                        </sizepolicy>
                       </property>
+                      <property name="font">
+                       <font>
+                        <family>Nirmala UI</family>
+                        <pointsize>8</pointsize>
+                       </font>
+                      </property>
                       <property name="text">
                        <string>History</string>
                       </property>
@@ -3345,6 +3597,12 @@ border-color: rgb(210, 201, 210);</string>
                         <horstretch>0</horstretch>
                         <verstretch>0</verstretch>
                        </sizepolicy>
+                      </property>
+                      <property name="font">
+                       <font>
+                        <family>Nirmala UI</family>
+                        <pointsize>8</pointsize>
+                       </font>
                       </property>
                       <property name="text">
                        <string>Insight</string>
@@ -3362,6 +3620,12 @@ border-color: rgb(210, 201, 210);</string>
                         <verstretch>0</verstretch>
                        </sizepolicy>
                       </property>
+                      <property name="font">
+                       <font>
+                        <family>Nirmala UI</family>
+                        <pointsize>8</pointsize>
+                       </font>
+                      </property>
                       <property name="text">
                        <string>Intimidation</string>
                       </property>
@@ -3377,6 +3641,12 @@ border-color: rgb(210, 201, 210);</string>
                         <horstretch>0</horstretch>
                         <verstretch>0</verstretch>
                        </sizepolicy>
+                      </property>
+                      <property name="font">
+                       <font>
+                        <family>Nirmala UI</family>
+                        <pointsize>8</pointsize>
+                       </font>
                       </property>
                       <property name="text">
                        <string>Investigation</string>
@@ -3394,6 +3664,12 @@ border-color: rgb(210, 201, 210);</string>
                         <verstretch>0</verstretch>
                        </sizepolicy>
                       </property>
+                      <property name="font">
+                       <font>
+                        <family>Nirmala UI</family>
+                        <pointsize>8</pointsize>
+                       </font>
+                      </property>
                       <property name="text">
                        <string>Medicine</string>
                       </property>
@@ -3409,6 +3685,12 @@ border-color: rgb(210, 201, 210);</string>
                         <horstretch>0</horstretch>
                         <verstretch>0</verstretch>
                        </sizepolicy>
+                      </property>
+                      <property name="font">
+                       <font>
+                        <family>Nirmala UI</family>
+                        <pointsize>8</pointsize>
+                       </font>
                       </property>
                       <property name="text">
                        <string>Nature</string>
@@ -3426,6 +3708,12 @@ border-color: rgb(210, 201, 210);</string>
                         <verstretch>0</verstretch>
                        </sizepolicy>
                       </property>
+                      <property name="font">
+                       <font>
+                        <family>Nirmala UI</family>
+                        <pointsize>8</pointsize>
+                       </font>
+                      </property>
                       <property name="text">
                        <string>Perception</string>
                       </property>
@@ -3441,6 +3729,12 @@ border-color: rgb(210, 201, 210);</string>
                         <horstretch>0</horstretch>
                         <verstretch>0</verstretch>
                        </sizepolicy>
+                      </property>
+                      <property name="font">
+                       <font>
+                        <family>Nirmala UI</family>
+                        <pointsize>8</pointsize>
+                       </font>
                       </property>
                       <property name="text">
                        <string>Performance</string>
@@ -3458,6 +3752,12 @@ border-color: rgb(210, 201, 210);</string>
                         <verstretch>0</verstretch>
                        </sizepolicy>
                       </property>
+                      <property name="font">
+                       <font>
+                        <family>Nirmala UI</family>
+                        <pointsize>8</pointsize>
+                       </font>
+                      </property>
                       <property name="text">
                        <string>Persuasion</string>
                       </property>
@@ -3473,6 +3773,12 @@ border-color: rgb(210, 201, 210);</string>
                         <horstretch>0</horstretch>
                         <verstretch>0</verstretch>
                        </sizepolicy>
+                      </property>
+                      <property name="font">
+                       <font>
+                        <family>Nirmala UI</family>
+                        <pointsize>8</pointsize>
+                       </font>
                       </property>
                       <property name="text">
                        <string>Religion</string>
@@ -3490,6 +3796,12 @@ border-color: rgb(210, 201, 210);</string>
                         <verstretch>0</verstretch>
                        </sizepolicy>
                       </property>
+                      <property name="font">
+                       <font>
+                        <family>Nirmala UI</family>
+                        <pointsize>8</pointsize>
+                       </font>
+                      </property>
                       <property name="text">
                        <string>SleightOfHand</string>
                       </property>
@@ -3506,6 +3818,12 @@ border-color: rgb(210, 201, 210);</string>
                         <verstretch>0</verstretch>
                        </sizepolicy>
                       </property>
+                      <property name="font">
+                       <font>
+                        <family>Nirmala UI</family>
+                        <pointsize>8</pointsize>
+                       </font>
+                      </property>
                       <property name="text">
                        <string>Stealth</string>
                       </property>
@@ -3521,6 +3839,12 @@ border-color: rgb(210, 201, 210);</string>
                         <horstretch>0</horstretch>
                         <verstretch>0</verstretch>
                        </sizepolicy>
+                      </property>
+                      <property name="font">
+                       <font>
+                        <family>Nirmala UI</family>
+                        <pointsize>8</pointsize>
+                       </font>
                       </property>
                       <property name="text">
                        <string>Survival</string>
@@ -3541,168 +3865,1213 @@ border-color: rgb(210, 201, 210);</string>
            </layout>
           </item>
          </layout>
-         <zorder>leftHandSplitter</zorder>
-         <zorder>layoutWidget</zorder>
-         <zorder>layoutWidget</zorder>
-         <zorder>additionalProficienciesSplitter</zorder>
-         <zorder>layoutWidget</zorder>
         </widget>
         <widget class="QWidget" name="tab_CharacterSheet_Combat">
          <attribute name="title">
           <string>Combat</string>
          </attribute>
-         <widget class="QSplitter" name="healthPointSplitter1">
+         <widget class="QWidget" name="">
           <property name="geometry">
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>361</width>
-            <height>101</height>
+            <width>491</width>
+            <height>551</height>
            </rect>
           </property>
-          <property name="orientation">
-           <enum>Qt::Vertical</enum>
-          </property>
-          <property name="handleWidth">
-           <number>0</number>
-          </property>
-          <widget class="QLabel" name="label_HP">
-           <property name="text">
-            <string>Hit Points</string>
+          <layout class="QVBoxLayout" name="combatWorkspace" stretch="1,1,1,1">
+           <property name="spacing">
+            <number>0</number>
            </property>
-           <property name="alignment">
-            <set>Qt::AlignCenter</set>
-           </property>
-          </widget>
-          <widget class="QSplitter" name="healthPointSplitter2">
-           <property name="orientation">
-            <enum>Qt::Horizontal</enum>
-           </property>
-           <property name="handleWidth">
-            <number>5</number>
-           </property>
-           <widget class="QSplitter" name="currentHPSplitter">
-            <property name="orientation">
-             <enum>Qt::Vertical</enum>
-            </property>
-            <property name="handleWidth">
-             <number>0</number>
-            </property>
-            <widget class="QLabel" name="label_CurrentHP">
-             <property name="text">
-              <string>Current</string>
+           <item>
+            <layout class="QVBoxLayout" name="HPLayout1" stretch="1,1">
+             <property name="spacing">
+              <number>0</number>
              </property>
-             <property name="alignment">
-              <set>Qt::AlignCenter</set>
+             <item>
+              <widget class="QLabel" name="label_HP">
+               <property name="text">
+                <string>Hit Points</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="HPLayout2">
+               <property name="spacing">
+                <number>0</number>
+               </property>
+               <item>
+                <layout class="QVBoxLayout" name="currentHPLayout">
+                 <property name="spacing">
+                  <number>0</number>
+                 </property>
+                 <item>
+                  <widget class="QLabel" name="label_CurrentHP">
+                   <property name="text">
+                    <string>Current</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="lineEdit_CurrentHP">
+                   <property name="font">
+                    <font>
+                     <pointsize>16</pointsize>
+                     <weight>50</weight>
+                     <bold>false</bold>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">background-color: rgb(210, 210, 210);</string>
+                   </property>
+                   <property name="text">
+                    <string>0</string>
+                   </property>
+                   <property name="maxLength">
+                    <number>2</number>
+                   </property>
+                   <property name="frame">
+                    <bool>false</bool>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QVBoxLayout" name="maximumHPLayout">
+                 <property name="spacing">
+                  <number>0</number>
+                 </property>
+                 <item>
+                  <widget class="QLabel" name="label_MaximumHP">
+                   <property name="text">
+                    <string>Maximum</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="lineEdit_MaximumHP">
+                   <property name="font">
+                    <font>
+                     <pointsize>16</pointsize>
+                     <weight>50</weight>
+                     <bold>false</bold>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">background-color: rgb(210, 210, 210);</string>
+                   </property>
+                   <property name="text">
+                    <string>0</string>
+                   </property>
+                   <property name="maxLength">
+                    <number>2</number>
+                   </property>
+                   <property name="frame">
+                    <bool>false</bool>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QVBoxLayout" name="temporaryHPLayout">
+                 <property name="spacing">
+                  <number>0</number>
+                 </property>
+                 <item>
+                  <widget class="QLabel" name="label_TemporaryHP">
+                   <property name="text">
+                    <string>Temporary</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="lineEdit_TemporaryHP">
+                   <property name="font">
+                    <font>
+                     <pointsize>16</pointsize>
+                     <weight>50</weight>
+                     <bold>false</bold>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">background-color: rgb(210, 210, 210);</string>
+                   </property>
+                   <property name="text">
+                    <string>0</string>
+                   </property>
+                   <property name="maxLength">
+                    <number>2</number>
+                   </property>
+                   <property name="frame">
+                    <bool>false</bool>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QVBoxLayout" name="attackWorkspaceLayout1" stretch="1,1">
+             <property name="spacing">
+              <number>0</number>
              </property>
-            </widget>
-            <widget class="QLineEdit" name="lineEdit_CurrentHP">
-             <property name="font">
-              <font>
-               <pointsize>16</pointsize>
-               <weight>50</weight>
-               <bold>false</bold>
-              </font>
+             <item>
+              <widget class="QLabel" name="attackWorkspaceLabel">
+               <property name="text">
+                <string>Attack Workspace</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="attackWorkspaceLayout2">
+               <property name="spacing">
+                <number>0</number>
+               </property>
+               <item>
+                <layout class="QVBoxLayout" name="attackProficiencyLayout">
+                 <property name="spacing">
+                  <number>0</number>
+                 </property>
+                 <item>
+                  <spacer name="verticalSpacer">
+                   <property name="orientation">
+                    <enum>Qt::Vertical</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>20</width>
+                     <height>17</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item>
+                  <widget class="QComboBox" name="comboBox_Attack1">
+                   <property name="currentText">
+                    <string>□</string>
+                   </property>
+                   <item>
+                    <property name="text">
+                     <string>□</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>■</string>
+                    </property>
+                   </item>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QComboBox" name="comboBox_Attack2">
+                   <property name="currentText">
+                    <string>□</string>
+                   </property>
+                   <item>
+                    <property name="text">
+                     <string>□</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>■</string>
+                    </property>
+                   </item>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QComboBox" name="comboBox_Attack3">
+                   <property name="currentText">
+                    <string>□</string>
+                   </property>
+                   <item>
+                    <property name="text">
+                     <string>□</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>■</string>
+                    </property>
+                   </item>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QComboBox" name="comboBox_Attack4">
+                   <property name="currentText">
+                    <string>□</string>
+                   </property>
+                   <item>
+                    <property name="text">
+                     <string>□</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>■</string>
+                    </property>
+                   </item>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QComboBox" name="comboBox_Attack5">
+                   <property name="currentText">
+                    <string>□</string>
+                   </property>
+                   <item>
+                    <property name="text">
+                     <string>□</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>■</string>
+                    </property>
+                   </item>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QComboBox" name="comboBox_Attack6">
+                   <property name="currentText">
+                    <string>□</string>
+                   </property>
+                   <item>
+                    <property name="text">
+                     <string>□</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>■</string>
+                    </property>
+                   </item>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QComboBox" name="comboBox_Attack7">
+                   <property name="currentText">
+                    <string>□</string>
+                   </property>
+                   <item>
+                    <property name="text">
+                     <string>□</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>■</string>
+                    </property>
+                   </item>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QComboBox" name="comboBox_Attack8">
+                   <property name="currentText">
+                    <string>□</string>
+                   </property>
+                   <item>
+                    <property name="text">
+                     <string>□</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>■</string>
+                    </property>
+                   </item>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QComboBox" name="comboBox_Attack9">
+                   <property name="currentText">
+                    <string>□</string>
+                   </property>
+                   <item>
+                    <property name="text">
+                     <string>□</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>■</string>
+                    </property>
+                   </item>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QComboBox" name="comboBox_Attack10">
+                   <property name="currentText">
+                    <string>□</string>
+                   </property>
+                   <item>
+                    <property name="text">
+                     <string>□</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>■</string>
+                    </property>
+                   </item>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QVBoxLayout" name="attackNameLayout">
+                 <property name="spacing">
+                  <number>0</number>
+                 </property>
+                 <item>
+                  <widget class="QLabel" name="attackNameLabel">
+                   <property name="text">
+                    <string>Name</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="lineEdit_Attack1"/>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="lineEdit_Attack2"/>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="lineEdit_Attack3"/>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="lineEdit_Attack4"/>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="lineEdit_Attack5"/>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="lineEdit_Attack6"/>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="lineEdit_Attack7"/>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="lineEdit_Attack8"/>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="lineEdit_Attack9"/>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="lineEdit_Attack10"/>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QVBoxLayout" name="attackGovLayout">
+                 <property name="spacing">
+                  <number>0</number>
+                 </property>
+                 <item>
+                  <widget class="QLabel" name="attackGovLabel">
+                   <property name="text">
+                    <string>Gov</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QComboBox" name="comboBox_Gov1">
+                   <property name="currentText">
+                    <string>Str</string>
+                   </property>
+                   <item>
+                    <property name="text">
+                     <string>Str</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Dex</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Con</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Int</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Wis</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Cha</string>
+                    </property>
+                   </item>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QComboBox" name="comboBox_Gov2">
+                   <property name="currentText">
+                    <string>Str</string>
+                   </property>
+                   <item>
+                    <property name="text">
+                     <string>Str</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Dex</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Con</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Int</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Wis</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Cha</string>
+                    </property>
+                   </item>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QComboBox" name="comboBox_Gov3">
+                   <property name="currentText">
+                    <string>Str</string>
+                   </property>
+                   <item>
+                    <property name="text">
+                     <string>Str</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Dex</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Con</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Int</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Wis</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Cha</string>
+                    </property>
+                   </item>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QComboBox" name="comboBox_Gov4">
+                   <property name="currentText">
+                    <string>Str</string>
+                   </property>
+                   <item>
+                    <property name="text">
+                     <string>Str</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Dex</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Con</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Int</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Wis</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Cha</string>
+                    </property>
+                   </item>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QComboBox" name="comboBox_Gov5">
+                   <property name="currentText">
+                    <string>Str</string>
+                   </property>
+                   <item>
+                    <property name="text">
+                     <string>Str</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Dex</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Con</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Int</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Wis</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Cha</string>
+                    </property>
+                   </item>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QComboBox" name="comboBox_Gov6">
+                   <property name="currentText">
+                    <string>Str</string>
+                   </property>
+                   <item>
+                    <property name="text">
+                     <string>Str</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Dex</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Con</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Int</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Wis</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Cha</string>
+                    </property>
+                   </item>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QComboBox" name="comboBox_Gov7">
+                   <property name="currentText">
+                    <string>Str</string>
+                   </property>
+                   <item>
+                    <property name="text">
+                     <string>Str</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Dex</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Con</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Int</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Wis</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Cha</string>
+                    </property>
+                   </item>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QComboBox" name="comboBox_Gov8">
+                   <property name="currentText">
+                    <string>Str</string>
+                   </property>
+                   <item>
+                    <property name="text">
+                     <string>Str</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Dex</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Con</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Int</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Wis</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Cha</string>
+                    </property>
+                   </item>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QComboBox" name="comboBox_Gov9">
+                   <property name="currentText">
+                    <string>Str</string>
+                   </property>
+                   <item>
+                    <property name="text">
+                     <string>Str</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Dex</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Con</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Int</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Wis</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Cha</string>
+                    </property>
+                   </item>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QComboBox" name="comboBox_Gov10">
+                   <property name="currentText">
+                    <string>Str</string>
+                   </property>
+                   <item>
+                    <property name="text">
+                     <string>Str</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Dex</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Con</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Int</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Wis</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Cha</string>
+                    </property>
+                   </item>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QVBoxLayout" name="attackBonusLayout">
+                 <property name="spacing">
+                  <number>0</number>
+                 </property>
+                 <item>
+                  <widget class="QLabel" name="attackBonusLabel">
+                   <property name="text">
+                    <string>Bonus</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="lineEdit_attackBonus1"/>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="lineEdit_attackBonus2"/>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="lineEdit_attackBonus3"/>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="lineEdit_attackBonus4"/>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="lineEdit_attackBonus5"/>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="lineEdit_attackBonus6"/>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="lineEdit_attackBonus7"/>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="lineEdit_attackBonus8"/>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="lineEdit_attackBonus9"/>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="lineEdit_attackBonus10"/>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QVBoxLayout" name="attackSpecialLayout">
+                 <property name="spacing">
+                  <number>0</number>
+                 </property>
+                 <item>
+                  <widget class="QLabel" name="attackSpecialLabel">
+                   <property name="text">
+                    <string>Special</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="lineEdit_AttackSpecial1"/>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="lineEdit_AttackSpecial2"/>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="lineEdit_AttackSpecial3"/>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="lineEdit_AttackSpecial4"/>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="lineEdit_AttackSpecial5"/>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="lineEdit_AttackSpecial6"/>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="lineEdit_AttackSpecial7"/>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="lineEdit_AttackSpecial8"/>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="lineEdit_AttackSpecial9"/>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="lineEdit_AttackSpecial10"/>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QVBoxLayout" name="attackDamageLayout">
+                 <property name="spacing">
+                  <number>0</number>
+                 </property>
+                 <item>
+                  <widget class="QLabel" name="attackDamageLabel">
+                   <property name="text">
+                    <string>Damage</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="lineEdit_AttackDamage1"/>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="lineEdit_AttackDamage2"/>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="lineEdit_AttackDamage3"/>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="lineEdit_AttackDamage4"/>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="lineEdit_AttackDamage5"/>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="lineEdit_AttackDamage6"/>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="lineEdit_AttackDamage7"/>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="lineEdit_AttackDamage8"/>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="lineEdit_AttackDamage9"/>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="lineEdit_AttackDamage10"/>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QVBoxLayout" name="classFeaturesLayout">
+             <property name="spacing">
+              <number>0</number>
              </property>
-             <property name="styleSheet">
-              <string notr="true">background-color: rgb(210, 210, 210);</string>
+             <item>
+              <widget class="QLabel" name="classFeaturesLabel">
+               <property name="text">
+                <string>Features</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="lineEdit_ClassFeature1">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                 <horstretch>1</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="lineEdit_ClassFeature2">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                 <horstretch>1</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="lineEdit_ClassFeature3">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                 <horstretch>1</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="lineEdit_ClassFeature4">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                 <horstretch>1</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="lineEdit_ClassFeature5">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                 <horstretch>1</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="lineEdit_ClassFeature6">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                 <horstretch>1</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="lineEdit_ClassFeature7">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                 <horstretch>1</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QVBoxLayout" name="classFeaturesLayout_2">
+             <property name="spacing">
+              <number>0</number>
              </property>
-             <property name="text">
-              <string>0</string>
-             </property>
-             <property name="maxLength">
-              <number>2</number>
-             </property>
-             <property name="frame">
-              <bool>false</bool>
-             </property>
-             <property name="alignment">
-              <set>Qt::AlignCenter</set>
-             </property>
-            </widget>
-           </widget>
-           <widget class="QSplitter" name="maximumHPSplitter">
-            <property name="orientation">
-             <enum>Qt::Vertical</enum>
-            </property>
-            <property name="handleWidth">
-             <number>0</number>
-            </property>
-            <widget class="QLabel" name="label_MaximumHP">
-             <property name="text">
-              <string>Maximum</string>
-             </property>
-             <property name="alignment">
-              <set>Qt::AlignCenter</set>
-             </property>
-            </widget>
-            <widget class="QLineEdit" name="lineEdit_MaximumHP">
-             <property name="font">
-              <font>
-               <pointsize>16</pointsize>
-               <weight>50</weight>
-               <bold>false</bold>
-              </font>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">background-color: rgb(210, 210, 210);</string>
-             </property>
-             <property name="text">
-              <string>0</string>
-             </property>
-             <property name="maxLength">
-              <number>2</number>
-             </property>
-             <property name="frame">
-              <bool>false</bool>
-             </property>
-             <property name="alignment">
-              <set>Qt::AlignCenter</set>
-             </property>
-            </widget>
-           </widget>
-           <widget class="QSplitter" name="temporaryHPSplitter">
-            <property name="orientation">
-             <enum>Qt::Vertical</enum>
-            </property>
-            <property name="handleWidth">
-             <number>0</number>
-            </property>
-            <widget class="QLabel" name="label_TemporaryHP">
-             <property name="text">
-              <string>Temporary</string>
-             </property>
-             <property name="alignment">
-              <set>Qt::AlignCenter</set>
-             </property>
-            </widget>
-            <widget class="QLineEdit" name="lineEdit_TemporaryHP">
-             <property name="font">
-              <font>
-               <pointsize>16</pointsize>
-               <weight>50</weight>
-               <bold>false</bold>
-              </font>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">background-color: rgb(210, 210, 210);</string>
-             </property>
-             <property name="text">
-              <string>0</string>
-             </property>
-             <property name="maxLength">
-              <number>2</number>
-             </property>
-             <property name="frame">
-              <bool>false</bool>
-             </property>
-             <property name="alignment">
-              <set>Qt::AlignCenter</set>
-             </property>
-            </widget>
-           </widget>
-          </widget>
+             <item>
+              <widget class="QLabel" name="traitsLabel">
+               <property name="text">
+                <string>Traits</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="lineEdit_Traits1">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                 <horstretch>1</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="lineEdit_Traits2">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                 <horstretch>1</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="lineEdit_Traits3">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                 <horstretch>1</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="lineEdit_Traits4">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                 <horstretch>1</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="lineEdit_Traits5">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                 <horstretch>1</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="lineEdit_Traits6">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                 <horstretch>1</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="lineEdit_Traits7"/>
+             </item>
+            </layout>
+           </item>
+          </layout>
          </widget>
+         <zorder>healthPointSplitter1</zorder>
+         <zorder>attackWorkspaceLabel</zorder>
+         <zorder>attackNameLabel</zorder>
+         <zorder>attackGovLabel</zorder>
+         <zorder>attackBonusLabel</zorder>
+         <zorder>attackSpecialLabel</zorder>
+         <zorder>attackDamageLabel</zorder>
+         <zorder>verticalSpacer</zorder>
+         <zorder>comboBox_Attack1</zorder>
+         <zorder>comboBox_Attack2</zorder>
+         <zorder>comboBox_Attack3</zorder>
+         <zorder>comboBox_Attack4</zorder>
+         <zorder>comboBox_Attack5</zorder>
+         <zorder>comboBox_Attack6</zorder>
+         <zorder>comboBox_Attack7</zorder>
+         <zorder>comboBox_Attack8</zorder>
+         <zorder>comboBox_Attack9</zorder>
+         <zorder>comboBox_Attack10</zorder>
+         <zorder>lineEdit_Attack1</zorder>
+         <zorder>lineEdit_Attack2</zorder>
+         <zorder>lineEdit_Attack3</zorder>
+         <zorder>lineEdit_Attack4</zorder>
+         <zorder>lineEdit_Attack5</zorder>
+         <zorder>lineEdit_Attack6</zorder>
+         <zorder>lineEdit_Attack7</zorder>
+         <zorder>lineEdit_Attack8</zorder>
+         <zorder>lineEdit_Attack9</zorder>
+         <zorder>lineEdit_Attack10</zorder>
+         <zorder>lineEdit_attackBonus6</zorder>
+         <zorder>lineEdit_attackBonus3</zorder>
+         <zorder>lineEdit_attackBonus9</zorder>
+         <zorder>lineEdit_attackBonus2</zorder>
+         <zorder>lineEdit_attackBonus1</zorder>
+         <zorder>lineEdit_attackBonus4</zorder>
+         <zorder>lineEdit_attackBonus5</zorder>
+         <zorder>lineEdit_attackBonus10</zorder>
+         <zorder>lineEdit_attackBonus7</zorder>
+         <zorder>lineEdit_attackBonus8</zorder>
+         <zorder>lineEdit_AttackSpecial6</zorder>
+         <zorder>lineEdit_AttackSpecial3</zorder>
+         <zorder>lineEdit_AttackSpecial9</zorder>
+         <zorder>lineEdit_AttackSpecial2</zorder>
+         <zorder>lineEdit_AttackSpecial1</zorder>
+         <zorder>lineEdit_AttackSpecial4</zorder>
+         <zorder>lineEdit_AttackSpecial5</zorder>
+         <zorder>lineEdit_AttackSpecial10</zorder>
+         <zorder>lineEdit_AttackSpecial7</zorder>
+         <zorder>lineEdit_AttackSpecial8</zorder>
+         <zorder>comboBox_Gov9</zorder>
+         <zorder>comboBox_Gov8</zorder>
+         <zorder>comboBox_Gov3</zorder>
+         <zorder>comboBox_Gov6</zorder>
+         <zorder>comboBox_Gov5</zorder>
+         <zorder>comboBox_Gov1</zorder>
+         <zorder>comboBox_Gov10</zorder>
+         <zorder>comboBox_Gov4</zorder>
+         <zorder>comboBox_Gov7</zorder>
+         <zorder>comboBox_Gov2</zorder>
+         <zorder>attackBonusLabel</zorder>
+         <zorder>lineEdit_AttackDamage3</zorder>
+         <zorder>lineEdit_AttackDamage2</zorder>
+         <zorder>lineEdit_AttackDamage5</zorder>
+         <zorder>lineEdit_AttackDamage6</zorder>
+         <zorder>lineEdit_AttackDamage4</zorder>
+         <zorder>lineEdit_AttackDamage9</zorder>
+         <zorder>lineEdit_AttackDamage1</zorder>
+         <zorder>lineEdit_AttackDamage8</zorder>
+         <zorder>lineEdit_AttackDamage7</zorder>
+         <zorder>lineEdit_AttackDamage10</zorder>
+         <zorder>lineEdit_ClassFeature1</zorder>
+         <zorder>lineEdit_ClassFeature2</zorder>
+         <zorder>lineEdit_ClassFeature3</zorder>
+         <zorder>lineEdit_ClassFeature4</zorder>
+         <zorder>lineEdit_ClassFeature5</zorder>
+         <zorder>lineEdit_ClassFeature6</zorder>
+         <zorder>lineEdit_ClassFeature7</zorder>
+         <zorder>classFeaturesLabel</zorder>
+         <zorder>layoutWidget</zorder>
         </widget>
         <widget class="QWidget" name="tab_CharacterSheet_Details">
          <attribute name="title">

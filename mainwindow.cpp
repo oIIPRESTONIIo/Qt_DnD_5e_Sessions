@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "charactersheet.h"
+#include <QScreen>
 
 CharacterSheet Braum;
 
@@ -11,6 +12,18 @@ MainWindow::MainWindow(QWidget *parent) :
   ui->setupUi(this);
 
   editableBoxFormatting();
+
+  QRect rect = QGuiApplication::primaryScreen()->geometry();
+
+  int width = rect.width();
+
+  int height = rect.height();
+
+  this->setFixedSize(width , height);
+
+  ui->tabWidget_CharacterSheet->setFixedSize(width, height  * 0.93);
+
+  ui->tabWidget_MainMenu->setFixedSize(width, height);
 }
 
 MainWindow::~MainWindow()
