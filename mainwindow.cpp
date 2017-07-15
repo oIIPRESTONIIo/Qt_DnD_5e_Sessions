@@ -1,34 +1,96 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "charactersheet.h"
-#include <QScreen>
 
 CharacterSheet Braum;
 
 MainWindow::MainWindow(QWidget *parent) :
-  QMainWindow(parent),
-  ui(new Ui::MainWindow)
+    QMainWindow(parent),
+    ui(new Ui::MainWindow)
 {
-  ui->setupUi(this);
+    ui->setupUi(this);
 
-  editableBoxFormatting();
+    editableBoxFormatting();
 
-  QRect rect = QGuiApplication::primaryScreen()->geometry();
+    platformSetup();
 
-  int width = rect.width();
+    this->showMaximized();
 
-  int height = rect.height();
-
-  this->setFixedSize(width , height);
-
-  ui->tabWidget_CharacterSheet->setFixedSize(width, height  * 0.93);
-
-  ui->tabWidget_MainMenu->setFixedSize(width, height);
+    saveCharacterSheet();
 }
 
 MainWindow::~MainWindow()
 {
   delete ui;
+}
+
+void MainWindow::platformSetup() {
+
+    QSysInfo hostOS;
+
+    if (hostOS.productType() == "winrt") {
+        int screenHeight = QGuiApplication::primaryScreen()->geometry().height();
+
+        int screenWidth = (screenHeight / 1.777777777777778);
+
+        this->setMaximumHeight(screenHeight);
+
+        this->setMaximumWidth(screenWidth);
+
+        ui->centralWidget->setFixedSize(screenWidth, screenHeight);
+
+        ui->tabWidget_MainMenu->setFixedSize(screenWidth, screenHeight);
+
+        ui->tabWidget_CharacterSheet->setFixedSize(screenWidth, screenHeight);
+
+    }
+
+    else if (hostOS.productType() == "android") {
+
+        int screenHeight = QGuiApplication::primaryScreen()->geometry().height();
+
+        int screenWidth = (screenHeight * 1.777777777777778);
+
+        this->setMaximumHeight(screenHeight);
+
+        this->setMaximumWidth(screenWidth);
+
+        ui->tabWidget_CharacterSheet->setFixedSize(screenWidth, (screenHeight * 0.92) - 22);
+
+        ui->tabWidget_MainMenu->setFixedSize(screenWidth, screenHeight);
+
+
+    }
+
+    else if (hostOS.productType() == "ios") {
+
+        int screenHeight = QGuiApplication::primaryScreen()->geometry().height();
+
+        int screenWidth = (screenHeight * 1.777777777777778);
+
+        this->setMaximumHeight(screenHeight);
+
+        this->setMaximumWidth(screenWidth);
+
+        ui->tabWidget_CharacterSheet->setFixedSize(screenWidth, (screenHeight * 0.92) - 22);
+
+        ui->tabWidget_MainMenu->setFixedSize(screenWidth, screenHeight);
+
+    } else {
+
+        int screenHeight = 1080;
+
+        int screenWidth = (screenHeight / 1.777777777777778);
+
+        this->setMaximumHeight(screenHeight);
+
+        this->setMaximumWidth(screenWidth);
+
+        ui->tabWidget_CharacterSheet->setFixedSize(screenWidth, (screenHeight * 0.92) - 22);
+
+        ui->tabWidget_MainMenu->setFixedSize(screenWidth, screenHeight);
+
+    }
 }
 
 void MainWindow::editableBoxFormatting() {
@@ -67,7 +129,263 @@ void MainWindow::setSkillBonuses(){
   setIntBonuses();
   setWisBonuses();
   setChaBonuses();
+  setAttackBonuses();
 
+}
+
+void MainWindow::setAttackBonuses(){
+
+    int proficiency = Braum.getProficiency().toInt();
+    int modifier = 0;
+
+    QList<QComboBox*>comboBoxList;
+
+    comboBoxList.append(ui->comboBox_Gov1);
+    comboBoxList.append(ui->comboBox_Gov2);
+    comboBoxList.append(ui->comboBox_Gov3);
+    comboBoxList.append(ui->comboBox_Gov4);
+    comboBoxList.append(ui->comboBox_Gov5);
+    comboBoxList.append(ui->comboBox_Gov6);
+    comboBoxList.append(ui->comboBox_Gov7);
+    comboBoxList.append(ui->comboBox_Gov8);
+    comboBoxList.append(ui->comboBox_Gov9);
+    comboBoxList.append(ui->comboBox_Gov10);
+
+    QList<QLineEdit*>lineEditList;
+
+    lineEditList.append(ui->lineEdit_AttackBonus1);
+    lineEditList.append(ui->lineEdit_AttackBonus2);
+    lineEditList.append(ui->lineEdit_AttackBonus3);
+    lineEditList.append(ui->lineEdit_AttackBonus4);
+    lineEditList.append(ui->lineEdit_AttackBonus5);
+    lineEditList.append(ui->lineEdit_AttackBonus6);
+    lineEditList.append(ui->lineEdit_AttackBonus7);
+    lineEditList.append(ui->lineEdit_AttackBonus8);
+    lineEditList.append(ui->lineEdit_AttackBonus9);
+    lineEditList.append(ui->lineEdit_AttackBonus10);
+
+    QList<QComboBox*>comboBoxAttackProficiency;
+
+    comboBoxAttackProficiency.append(ui->comboBox_Attack1);
+    comboBoxAttackProficiency.append(ui->comboBox_Attack2);
+    comboBoxAttackProficiency.append(ui->comboBox_Attack3);
+    comboBoxAttackProficiency.append(ui->comboBox_Attack4);
+    comboBoxAttackProficiency.append(ui->comboBox_Attack5);
+    comboBoxAttackProficiency.append(ui->comboBox_Attack6);
+    comboBoxAttackProficiency.append(ui->comboBox_Attack7);
+    comboBoxAttackProficiency.append(ui->comboBox_Attack8);
+    comboBoxAttackProficiency.append(ui->comboBox_Attack9);
+    comboBoxAttackProficiency.append(ui->comboBox_Attack10);
+
+    int index = 0;
+
+    foreach (QComboBox *comboBox, comboBoxList) {
+
+        switch(comboBox->currentIndex()) {
+
+        //Blank
+        case 0:
+            modifier = 0;
+
+            if (comboBoxAttackProficiency[index]->currentIndex() == 1){
+                int bonus = proficiency + modifier;
+
+                if (bonus >= 0) {
+                    lineEditList[index]->setText(Braum.concatPlus(bonus));
+                    saveItem(comboBox);
+                }
+                else {
+                    lineEditList[index]->setText(QString::number(bonus));
+                    saveItem(comboBox);
+                }
+            }
+            else {
+                if (modifier >= 0) {
+                    lineEditList[index]->setText(Braum.concatPlus(modifier));
+                    saveItem(comboBox);
+                }
+                else {
+                    lineEditList[index]->setText(QString::number(modifier));
+                    saveItem(comboBox);
+                }
+            }
+
+            break;
+        //Strength
+        case 1:
+            modifier = Braum.getStrMod().toInt();
+
+            if (comboBoxAttackProficiency[index]->currentIndex() == 1){
+                int bonus = proficiency + modifier;
+
+                if (bonus >= 0) {
+                    lineEditList[index]->setText(Braum.concatPlus(bonus));
+                    saveItem(comboBox);
+                }
+                else {
+                    lineEditList[index]->setText(QString::number(bonus));
+                    saveItem(comboBox);
+                }
+            }
+            else {
+                if (modifier >= 0) {
+                    lineEditList[index]->setText(Braum.concatPlus(modifier));
+                    saveItem(comboBox);
+                }
+                else {
+                    lineEditList[index]->setText(QString::number(modifier));
+                    saveItem(comboBox);
+                }
+            }
+            index++;
+            break;
+
+            //Dexterity
+        case 2:
+            modifier = Braum.getDexMod().toInt();
+
+            if (comboBoxAttackProficiency[index]->currentIndex() == 1){
+                int bonus = proficiency + modifier;
+
+                if (bonus >= 0) {
+                    lineEditList[index]->setText(Braum.concatPlus(bonus));
+                    saveItem(comboBox);
+                }
+                else {
+                    lineEditList[index]->setText(QString::number(bonus));
+                    saveItem(comboBox);
+                }
+            }
+            else {
+                if (modifier >= 0) {
+                    lineEditList[index]->setText(Braum.concatPlus(modifier));
+                    saveItem(comboBox);
+                }
+                else {
+                    lineEditList[index]->setText(QString::number(modifier));
+                    saveItem(comboBox);
+                }
+            }
+            index++;
+            break;
+
+            //Constitution
+        case 3:
+            modifier = Braum.getConMod().toInt();
+
+            if (comboBoxAttackProficiency[index]->currentIndex() == 1){
+                int bonus = proficiency + modifier;
+
+                if (bonus >= 0) {
+                    lineEditList[index]->setText(Braum.concatPlus(bonus));
+                    saveItem(comboBox);
+                }
+                else {
+                    lineEditList[index]->setText(QString::number(bonus));
+                    saveItem(comboBox);
+                }
+            }
+            else {
+                if (modifier >= 0) {
+                    lineEditList[index]->setText(Braum.concatPlus(modifier));
+                    saveItem(comboBox);
+                }
+                else {
+                    lineEditList[index]->setText(QString::number(modifier));
+                    saveItem(comboBox);
+                }
+            }
+            index++;
+            break;
+
+            //Intelligence
+        case 4:
+            modifier = Braum.getIntMod().toInt();
+
+            if (comboBoxAttackProficiency[index]->currentIndex() == 1){
+                int bonus = proficiency + modifier;
+
+                if (bonus >= 0) {
+                    lineEditList[index]->setText(Braum.concatPlus(bonus));
+                    saveItem(comboBox);
+                }
+                else {
+                    lineEditList[index]->setText(QString::number(bonus));
+                    saveItem(comboBox);
+                }
+            }
+            else {
+                if (modifier >= 0) {
+                    lineEditList[index]->setText(Braum.concatPlus(modifier));
+                    saveItem(comboBox);
+                }
+                else {
+                    lineEditList[index]->setText(QString::number(modifier));
+                    saveItem(comboBox);
+                }
+            }
+            index++;
+            break;
+
+            //Wisdom
+        case 5:
+            modifier = Braum.getWisMod().toInt();
+
+            if (comboBoxAttackProficiency[index]->currentIndex() == 1){
+                int bonus = proficiency + modifier;
+
+                if (bonus >= 0) {
+                    lineEditList[index]->setText(Braum.concatPlus(bonus));
+                    saveItem(comboBox);
+                }
+                else {
+                    lineEditList[index]->setText(QString::number(bonus));
+                    saveItem(comboBox);
+                }
+            }
+            else {
+                if (modifier >= 0) {
+                    lineEditList[index]->setText(Braum.concatPlus(modifier));
+                    saveItem(comboBox);
+                }
+                else {
+                    lineEditList[index]->setText(QString::number(modifier));
+                    saveItem(comboBox);
+                }
+            }
+            index++;
+            break;
+
+            //Charisma
+        case 6:
+            modifier = Braum.getChaMod().toInt();
+
+            if (comboBoxAttackProficiency[index]->currentIndex() == 1){
+                int bonus = proficiency + modifier;
+
+                if (bonus >= 0) {
+                    lineEditList[index]->setText(Braum.concatPlus(bonus));
+                    saveItem(comboBox);
+                }
+                else {
+                    lineEditList[index]->setText(QString::number(bonus));
+                    saveItem(comboBox);
+                }
+            }
+            else {
+                if (modifier >= 0) {
+                    lineEditList[index]->setText(Braum.concatPlus(modifier));
+                    saveItem(comboBox);
+                }
+                else {
+                    lineEditList[index]->setText(QString::number(modifier));
+                    saveItem(comboBox);
+                }
+            }
+            index++;
+            break;
+        }
+    }
 }
 
 void MainWindow::setStrBonuses(){
@@ -295,6 +613,26 @@ void MainWindow::setIntBonuses() {
           Braum.setIntSave(QString::number(modifier));
         }
     }
+
+    // Spell Attack Bonus
+
+  if ((modifier + proficiency) >= 0) {
+      ui->lineEdit_IntSave->setText(Braum.concatPlus(modifier + proficiency));
+      Braum.setIntSave(Braum.concatPlus(modifier + proficiency));
+    }
+  else {
+
+      ui->lineEdit_SpellAttackBonus->setText(QString::number(modifier + proficiency));
+      Braum.setSpellAttackBonus(QString::number(modifier + proficiency));
+    }
+
+
+
+    // Spell Save DC
+
+    ui->lineEdit_SpellSaveDC->setText(QString::number(8 + proficiency));
+    Braum.setSpellSaveDC(QString::number((8 + proficiency)));
+
 
   // Arcana Bonus
   if (ui->comboBox_Arcana->currentIndex() == 1){
@@ -693,6 +1031,107 @@ void MainWindow::setChaBonuses() {
     }
 }
 
+// Save and load functions
+
+void MainWindow::saveItem(QLineEdit *item){
+
+    QString name = Braum.getCharName()+".ini";
+    QSettings characterSave(name, QSettings::IniFormat);
+
+    characterSave.setValue(item->objectName(), item->text());
+}
+
+void MainWindow::saveItem(QPlainTextEdit *item){
+
+    QString name = Braum.getCharName()+".ini";
+    QSettings characterSave(name, QSettings::IniFormat);
+
+    characterSave.setValue(item->objectName(), item->toPlainText());
+}
+
+void MainWindow::saveItem(QComboBox *item){
+
+    QString name = Braum.getCharName()+".ini";
+    QSettings characterSave(name, QSettings::IniFormat);
+
+    characterSave.setValue(item->objectName(), item->currentIndex());
+}
+
+
+void MainWindow::saveCharacterSheet(){
+
+    QString name = Braum.getCharName()+".ini";
+    QSettings characterSave(name, QSettings::IniFormat);
+
+    QList<QLineEdit*>lineEditList = this->findChildren<QLineEdit*>();
+    foreach (QLineEdit* object, lineEditList) {
+        QString objectName = object->objectName();
+        characterSave.setValue(objectName, object->text());
+    }
+
+    QList<QPlainTextEdit*>textEditList = this->findChildren<QPlainTextEdit*>();
+    foreach (QPlainTextEdit* object, textEditList) {
+        QString objectName = object->objectName();
+        characterSave.setValue(objectName, object->toPlainText());
+    }
+
+    QList<QComboBox*>comboBoxList = this->findChildren<QComboBox*>();
+    foreach (QComboBox* object, comboBoxList) {
+        QString objectName = object->objectName();
+        characterSave.setValue(objectName, object->currentIndex());
+    }
+}
+
+void MainWindow::resetCharacterSheet(){
+
+    QSettings characterSave("default.ini", QSettings::IniFormat);
+
+    QList<QLineEdit*>lineEditList = this->findChildren<QLineEdit*>();
+    foreach (QLineEdit* object, lineEditList) {
+        QString objectName = object->objectName();
+        characterSave.setValue(objectName, object->text());
+    }
+
+    QList<QPlainTextEdit*>textEditList = this->findChildren<QPlainTextEdit*>();
+    foreach (QPlainTextEdit* object, textEditList) {
+        QString objectName = object->objectName();
+        characterSave.setValue(objectName, object->toPlainText());
+    }
+
+    QList<QComboBox*>comboBoxList = this->findChildren<QComboBox*>();
+    foreach (QComboBox* object, comboBoxList) {
+        QString objectName = object->objectName();
+        characterSave.setValue(objectName, object->currentIndex());
+    }
+
+}
+
+void MainWindow::loadCharacterSheet(){
+
+    QString name = Braum.getCharName()+".ini";
+    QSettings characterLoad(name, QSettings::IniFormat);
+
+    QList<QLineEdit*>lineEditList = this->findChildren<QLineEdit*>();
+    foreach (QLineEdit* object, lineEditList) {
+        QString objectName = object->objectName();
+        object->setText(characterLoad.value(objectName).toString());
+
+    }
+
+    QList<QPlainTextEdit*>textEditList = this->findChildren<QPlainTextEdit*>();
+    foreach (QPlainTextEdit* object, textEditList) {
+        QString objectName = object->objectName();
+        object->setPlainText(characterLoad.value(objectName).toString());
+    }
+
+    QList<QComboBox*>comboBoxList = this->findChildren<QComboBox*>();
+    foreach (QComboBox* object, comboBoxList) {
+        QString objectName = object->objectName();
+        object->setCurrentIndex(characterLoad.value(objectName).toInt());
+    }
+}
+
+
 // Slots for UI elements
 //Ability Scores Changed
 void MainWindow::on_lineEdit_StrScore_textChanged(const QString &arg1)
@@ -807,31 +1246,37 @@ void MainWindow::on_lineEdit_ChaScore_textChanged(const QString &arg1)
 void MainWindow::on_lineEdit_StrMod_textChanged(const QString &arg1)
 {
   setStrBonuses();
+  setAttackBonuses();
 }
 
 void MainWindow::on_lineEdit_DexMod_textChanged(const QString &arg1)
 {
   setDexBonuses();
+  setAttackBonuses();
 }
 
 void MainWindow::on_lineEdit_ConMod_textChanged(const QString &arg1)
 {
   setConBonuses();
+  setAttackBonuses();
 }
 
 void MainWindow::on_lineEdit_IntMod_textChanged(const QString &arg1)
 {
   setIntBonuses();
+  setAttackBonuses();
 }
 
 void MainWindow::on_lineEdit_WisMod_textChanged(const QString &arg1)
 {
   setWisBonuses();
+  setAttackBonuses();
 }
 
 void MainWindow::on_lineEdit_ChaMod_textChanged(const QString &arg1)
 {
   setChaBonuses();
+  setAttackBonuses();
 }
 
 // Combo Box Slots //ACTIVATED//
@@ -977,4 +1422,123 @@ void MainWindow::on_lineEdit_CurrentHP_textChanged(const QString &arg1)
 void MainWindow::on_lineEdit_MaximumHP_textChanged(const QString &arg1)
 {
     Braum.setMaximumHP(arg1);
+}
+
+// Saving and loading
+
+void MainWindow::on_pushButton_SaveCharacter_released()
+{
+    saveCharacterSheet();
+}
+
+void MainWindow::on_pushButton_LoadCharacter_released()
+{
+    loadCharacterSheet();
+}
+
+void MainWindow::on_pushButton_ResetCharacter_released()
+{
+    resetCharacterSheet();
+}
+
+// Attack comboBoxes
+
+void MainWindow::on_comboBox_Attack1_activated(const QString &arg1)
+{
+    setAttackBonuses();
+}
+
+void MainWindow::on_comboBox_Attack2_activated(const QString &arg1)
+{
+    setAttackBonuses();
+}
+
+void MainWindow::on_comboBox_Attack3_activated(const QString &arg1)
+{
+    setAttackBonuses();
+}
+
+void MainWindow::on_comboBox_Attack4_activated(const QString &arg1)
+{
+    setAttackBonuses();
+}
+
+void MainWindow::on_comboBox_Attack5_activated(const QString &arg1)
+{
+    setAttackBonuses();
+}
+
+void MainWindow::on_comboBox_Attack6_activated(const QString &arg1)
+{
+    setAttackBonuses();
+}
+
+void MainWindow::on_comboBox_Attack7_activated(const QString &arg1)
+{
+    setAttackBonuses();
+}
+
+void MainWindow::on_comboBox_Attack8_activated(const QString &arg1)
+{
+    setAttackBonuses();
+}
+
+void MainWindow::on_comboBox_Attack9_activated(const QString &arg1)
+{
+    setAttackBonuses();
+}
+
+void MainWindow::on_comboBox_Attack10_activated(const QString &arg1)
+{
+    setAttackBonuses();
+}
+
+void MainWindow::on_comboBox_Gov1_activated(const QString &arg1)
+{
+    setAttackBonuses();
+}
+
+void MainWindow::on_comboBox_Gov2_activated(const QString &arg1)
+{
+    setAttackBonuses();
+}
+
+void MainWindow::on_comboBox_Gov3_activated(const QString &arg1)
+{
+    setAttackBonuses();
+}
+
+void MainWindow::on_comboBox_Gov4_activated(const QString &arg1)
+{
+    setAttackBonuses();
+}
+
+void MainWindow::on_comboBox_Gov5_activated(const QString &arg1)
+{
+    setAttackBonuses();
+}
+
+void MainWindow::on_comboBox_Gov6_activated(const QString &arg1)
+{
+    setAttackBonuses();
+}
+
+void MainWindow::on_comboBox_Gov7_activated(const QString &arg1)
+{
+    setAttackBonuses();
+}
+
+void MainWindow::on_comboBox_Gov8_activated(const QString &arg1)
+{
+    setAttackBonuses();
+}
+
+void MainWindow::on_comboBox_Gov9_activated(const QString &arg1)
+{
+    setAttackBonuses();
+}
+
+void MainWindow::on_comboBox_Gov10_activated(const QString &arg1)
+{
+    setAttackBonuses();
 }

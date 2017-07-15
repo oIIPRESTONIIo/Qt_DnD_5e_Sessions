@@ -154,7 +154,7 @@ public:
 
 private:
 
-    QString mCharName = "Character Name";
+    QString mCharName = "default";
     QString mCharClass = "Unassigned";
     QString mCharLevel = "1";
     QString mCharBackground = "Unassigned";
@@ -167,8 +167,8 @@ private:
     QString mInitiative = "0";
     QString mSpeed = "30";
     QString mExperience = "0";
-    QString mMaximumHP = "";
-    QString mCurrentHP = "";
+    QString mMaximumHP = "0";
+    QString mCurrentHP = "0";
     QString mHitDiceType = "1dX";
     QString mHitDiceNumber = "1";
     QString mSpellAttackBonus = "0";

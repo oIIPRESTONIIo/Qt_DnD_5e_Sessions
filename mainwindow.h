@@ -2,6 +2,14 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QScreen>
+#include <QVariant>
+#include <QSettings>
+#include <QFile>
+#include <QTextStream>
+#include <QLineEdit>
+#include <QPlainTextEdit>
+#include <QComboBox>
 
 namespace Ui {
 class MainWindow;
@@ -19,6 +27,7 @@ private:
     Ui::MainWindow *ui;
 
 public:
+    void platformSetup();
     void editableBoxFormatting();
     void setProficiencyBonus(QString level);
     void setSkillBonuses();
@@ -28,6 +37,15 @@ public:
     void setIntBonuses();
     void setWisBonuses();
     void setChaBonuses();
+    void setAttackBonuses();
+
+    void saveItem(QLineEdit *item);
+    void saveItem(QPlainTextEdit *item);
+    void saveItem(QComboBox *item);
+    void saveCharacterSheet();
+    void resetCharacterSheet();
+    void loadCharacterSheet();
+    void writeToFile(QFile &outputFile, QByteArray writeBuffer);
 
 private:
     std::map<int, int> mModifierTable;
@@ -81,6 +99,29 @@ private slots:
     void on_comboBox_Intimidation_activated(const QString &arg1);
     void on_lineEdit_CurrentHP_textChanged(const QString &arg1);
     void on_lineEdit_MaximumHP_textChanged(const QString &arg1);
+    void on_pushButton_SaveCharacter_released();
+    void on_pushButton_LoadCharacter_released();
+    void on_pushButton_ResetCharacter_released();
+    void on_comboBox_Attack1_activated(const QString &arg1);
+    void on_comboBox_Attack2_activated(const QString &arg1);
+    void on_comboBox_Attack3_activated(const QString &arg1);
+    void on_comboBox_Attack4_activated(const QString &arg1);
+    void on_comboBox_Attack5_activated(const QString &arg1);
+    void on_comboBox_Attack6_activated(const QString &arg1);
+    void on_comboBox_Attack7_activated(const QString &arg1);
+    void on_comboBox_Attack8_activated(const QString &arg1);
+    void on_comboBox_Attack9_activated(const QString &arg1);
+    void on_comboBox_Attack10_activated(const QString &arg1);
+    void on_comboBox_Gov1_activated(const QString &arg1);
+    void on_comboBox_Gov2_activated(const QString &arg1);
+    void on_comboBox_Gov3_activated(const QString &arg1);
+    void on_comboBox_Gov4_activated(const QString &arg1);
+    void on_comboBox_Gov5_activated(const QString &arg1);
+    void on_comboBox_Gov6_activated(const QString &arg1);
+    void on_comboBox_Gov7_activated(const QString &arg1);
+    void on_comboBox_Gov8_activated(const QString &arg1);
+    void on_comboBox_Gov9_activated(const QString &arg1);
+    void on_comboBox_Gov10_activated(const QString &arg1);
 };
 
 #endif // MAINWINDOW_H
