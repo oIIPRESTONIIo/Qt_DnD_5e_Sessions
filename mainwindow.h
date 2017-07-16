@@ -10,6 +10,7 @@
 #include <QLineEdit>
 #include <QPlainTextEdit>
 #include <QComboBox>
+#include <QFileDialog>
 
 namespace Ui {
 class MainWindow;
