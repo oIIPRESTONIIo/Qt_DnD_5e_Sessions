@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>546</width>
-    <height>720</height>
+    <width>560</width>
+    <height>993</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -35,6 +35,12 @@
     </property>
     <item row="0" column="0">
      <widget class="QTabWidget" name="tabWidget_MainMenu">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+        <horstretch>2</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
       <property name="font">
        <font>
         <family>Nirmala UI</family>

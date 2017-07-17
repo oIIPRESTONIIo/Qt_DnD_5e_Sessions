@@ -1054,27 +1054,7 @@ void MainWindow::saveCharacterSheet(){
 
 void MainWindow::resetCharacterSheet(){
 
-//    QSettings characterSave("default.ini", QSettings::IniFormat);
-
-//    QList<QLineEdit*>lineEditList = this->findChildren<QLineEdit*>();
-//    foreach (QLineEdit* object, lineEditList) {
-//        QString objectName = object->objectName();
-//        characterSave.setValue(objectName, object->text());
-//    }
-
-//    QList<QPlainTextEdit*>textEditList = this->findChildren<QPlainTextEdit*>();
-//    foreach (QPlainTextEdit* object, textEditList) {
-//        QString objectName = object->objectName();
-//        characterSave.setValue(objectName, object->toPlainText());
-//    }
-
-//    QList<QComboBox*>comboBoxList = this->findChildren<QComboBox*>();
-//    foreach (QComboBox* object, comboBoxList) {
-//        QString objectName = object->objectName();
-//        characterSave.setValue(objectName, object->currentIndex());
-//    }
-
-  //QString name = Braum.getCharName()+".ini";
+  QString name = "default.ini";
   QSettings characterLoad(name, QSettings::IniFormat);
 
   QList<QLineEdit*>lineEditList = this->findChildren<QLineEdit*>();
@@ -1099,28 +1079,6 @@ void MainWindow::resetCharacterSheet(){
 }
 
 void MainWindow::loadCharacterSheet(){
-
-  //    QString name = Braum.getCharName()+".ini";
-  //    QSettings characterLoad(name, QSettings::IniFormat);
-
-  //    QList<QLineEdit*>lineEditList = this->findChildren<QLineEdit*>();
-  //    foreach (QLineEdit* object, lineEditList) {
-  //        QString objectName = object->objectName();
-  //        object->setText(characterLoad.value(objectName).toString());
-
-  //    }
-
-  //    QList<QPlainTextEdit*>textEditList = this->findChildren<QPlainTextEdit*>();
-  //    foreach (QPlainTextEdit* object, textEditList) {
-  //        QString objectName = object->objectName();
-  //        object->setPlainText(characterLoad.value(objectName).toString());
-  //    }
-
-  //    QList<QComboBox*>comboBoxList = this->findChildren<QComboBox*>();
-  //    foreach (QComboBox* object, comboBoxList) {
-  //        QString objectName = object->objectName();
-  //        object->setCurrentIndex(characterLoad.value(objectName).toInt());
-  //    }
 
   QFileDialog openCharacterDialog(this);
   openCharacterDialog.setFileMode(QFileDialog::ExistingFile);
