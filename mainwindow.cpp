@@ -16,7 +16,7 @@ MainWindow::MainWindow(QWidget *parent) :
 
     this->showMaximized();
 
-    saveCharacterSheet();
+    saveCharacterSheet(false);
 }
 
 MainWindow::~MainWindow()
@@ -34,11 +34,9 @@ void MainWindow::platformSetup() {
 
     QString operatingSystem = hostOS.productType();
 
-    if (operatingSystem == "winrt") {
+    if (operatingSystem == "windows") {
 
         this->setFixedSize(screenWidth, screenHeight - 63);
-
-        ui->tabWidget_MainMenu->setStyleSheet("QTabBar::tab { width: screenWidth/3 }");
 
     }
 
@@ -76,7 +74,7 @@ void MainWindow::editableBoxFormatting() {
 
 }
 
-void MainWindow::setProficiencyBonus(QString level){
+void MainWindow::setLevelBasedBonuses(QString level){
 
   if (level == QString("")) {
       ui->lineEdit_Proficiency->setText(QString("+2"));
@@ -89,6 +87,8 @@ void MainWindow::setProficiencyBonus(QString level){
       Braum.setProficiency(proficiency);
       setSkillBonuses();
     }
+
+  ui->lineEdit_HitDiceMaximum->setText(level);
 }
 
 void MainWindow::setSkillBonuses(){
@@ -587,7 +587,7 @@ void MainWindow::setIntBonuses() {
     // Spell Attack Bonus
 
   if ((modifier + proficiency) >= 0) {
-      ui->lineEdit_IntSave->setText(Braum.concatPlus(modifier + proficiency));
+      ui->lineEdit_SpellAttackBonus->setText(Braum.concatPlus(modifier + proficiency));
       Braum.setIntSave(Braum.concatPlus(modifier + proficiency));
     }
   else {
@@ -600,8 +600,8 @@ void MainWindow::setIntBonuses() {
 
     // Spell Save DC
 
-    ui->lineEdit_SpellSaveDC->setText(QString::number(8 + proficiency));
-    Braum.setSpellSaveDC(QString::number((8 + proficiency)));
+    ui->lineEdit_SpellSaveDC->setText(QString::number((8 + proficiency) + ui->lineEdit_IntMod->text().toInt()));
+    Braum.setSpellSaveDC(QString::number((8 + proficiency) + ui->lineEdit_IntMod->text().toInt()));
 
 
   // Arcana Bonus
@@ -1028,88 +1028,137 @@ void MainWindow::saveItem(QComboBox *item){
 }
 
 
-void MainWindow::saveCharacterSheet(){
+void MainWindow::saveCharacterSheet(bool initialSaveComplete){
 
-    QString name = Braum.getCharName()+".ini";
-    QSettings characterSave(name, QSettings::IniFormat);
+    if (initialSaveComplete) {
+
+        QString name = QFileDialog::getSaveFileName(this, tr("Save File"), "", tr("Character File (*.ini)"));
+        //        QString name = Braum.getCharName()+".ini";
+        QSettings characterSave(name, QSettings::IniFormat);
+
+        QList<QLineEdit*>lineEditList = this->findChildren<QLineEdit*>();
+        foreach (QLineEdit* object, lineEditList) {
+            QString objectName = object->objectName();
+            characterSave.setValue(objectName, object->text());
+        }
+
+        QList<QTextEdit*>textEditList = this->findChildren<QTextEdit*>();
+        foreach (QTextEdit* object, textEditList) {
+            QString objectName = object->objectName();
+            characterSave.setValue(objectName, object->toPlainText());
+        }
+
+        QList<QComboBox*>comboBoxList = this->findChildren<QComboBox*>();
+        foreach (QComboBox* object, comboBoxList) {
+            QString objectName = object->objectName();
+            characterSave.setValue(objectName, object->currentIndex());
+        }
+
+        QList<QCheckBox*>checkBoxList = this->findChildren<QCheckBox*>();
+        foreach (QCheckBox* object, checkBoxList) {
+            QString objectName = object->objectName();
+            characterSave.setValue(objectName, object->isChecked());
+        }
+    } else {
+
+        QSettings characterSave("default.ini", QSettings::IniFormat);
+
+        QList<QLineEdit*>lineEditList = this->findChildren<QLineEdit*>();
+        foreach (QLineEdit* object, lineEditList) {
+            QString objectName = object->objectName();
+            characterSave.setValue(objectName, object->text());
+        }
+
+        QList<QTextEdit*>textEditList = this->findChildren<QTextEdit*>();
+        foreach (QTextEdit* object, textEditList) {
+            QString objectName = object->objectName();
+            characterSave.setValue(objectName, object->toPlainText());
+        }
+
+        QList<QComboBox*>comboBoxList = this->findChildren<QComboBox*>();
+        foreach (QComboBox* object, comboBoxList) {
+            QString objectName = object->objectName();
+            characterSave.setValue(objectName, object->currentIndex());
+        }
+
+        QList<QCheckBox*>checkBoxList = this->findChildren<QCheckBox*>();
+        foreach (QCheckBox* object, checkBoxList) {
+            QString objectName = object->objectName();
+            characterSave.setValue(objectName, object->isChecked());
+
+        }
+    }
+}
+
+
+void MainWindow::resetCharacterSheet(){
+
+    QString name = "default.ini";
+    QSettings characterLoad(name, QSettings::IniFormat);
 
     QList<QLineEdit*>lineEditList = this->findChildren<QLineEdit*>();
     foreach (QLineEdit* object, lineEditList) {
         QString objectName = object->objectName();
-        characterSave.setValue(objectName, object->text());
+        object->setText(characterLoad.value(objectName).toString());
+
     }
 
-    QList<QPlainTextEdit*>textEditList = this->findChildren<QPlainTextEdit*>();
-    foreach (QPlainTextEdit* object, textEditList) {
+    QList<QTextEdit*>textEditList = this->findChildren<QTextEdit*>();
+    foreach (QTextEdit* object, textEditList) {
         QString objectName = object->objectName();
-        characterSave.setValue(objectName, object->toPlainText());
+        object->setPlainText(characterLoad.value(objectName).toString());
     }
 
     QList<QComboBox*>comboBoxList = this->findChildren<QComboBox*>();
     foreach (QComboBox* object, comboBoxList) {
         QString objectName = object->objectName();
-        characterSave.setValue(objectName, object->currentIndex());
+        object->setCurrentIndex(characterLoad.value(objectName).toInt());
     }
-}
-
-void MainWindow::resetCharacterSheet(){
-
-  QString name = "default.ini";
-  QSettings characterLoad(name, QSettings::IniFormat);
-
-  QList<QLineEdit*>lineEditList = this->findChildren<QLineEdit*>();
-  foreach (QLineEdit* object, lineEditList) {
-      QString objectName = object->objectName();
-      object->setText(characterLoad.value(objectName).toString());
-
+    QList<QCheckBox*>checkBoxList = this->findChildren<QCheckBox*>();
+    foreach (QCheckBox* object, checkBoxList) {
+        QString objectName = object->objectName();
+        object->setChecked(characterLoad.value(objectName).toBool());
     }
-
-  QList<QPlainTextEdit*>textEditList = this->findChildren<QPlainTextEdit*>();
-  foreach (QPlainTextEdit* object, textEditList) {
-      QString objectName = object->objectName();
-      object->setPlainText(characterLoad.value(objectName).toString());
-    }
-
-  QList<QComboBox*>comboBoxList = this->findChildren<QComboBox*>();
-  foreach (QComboBox* object, comboBoxList) {
-      QString objectName = object->objectName();
-      object->setCurrentIndex(characterLoad.value(objectName).toInt());
-    }
-
 }
 
 void MainWindow::loadCharacterSheet(){
 
-  QFileDialog openCharacterDialog(this);
-  openCharacterDialog.setFileMode(QFileDialog::ExistingFile);
-  openCharacterDialog.setNameFilter(tr("Character Files (*.ini)"));
-  openCharacterDialog.setViewMode(QFileDialog::Detail);
+    QFileDialog openCharacterDialog(this);
+    openCharacterDialog.setFileMode(QFileDialog::ExistingFile);
+    openCharacterDialog.setNameFilter(tr("Character File (*.ini)"));
+    openCharacterDialog.setViewMode(QFileDialog::Detail);
 
-  QStringList fileNames;
-  if (openCharacterDialog.exec()) {
-      fileNames = openCharacterDialog.selectedFiles();
+    QStringList fileNames;
+    if (openCharacterDialog.exec()) {
+        fileNames = openCharacterDialog.selectedFiles();
 
-      QString name = fileNames[0];
-      //QString name = Braum.getCharName()+".ini";
-      QSettings characterLoad(name, QSettings::IniFormat);
+        QString name = fileNames[0];
+        //QString name = Braum.getCharName()+".ini";
+        QSettings characterLoad(name, QSettings::IniFormat);
 
-      QList<QLineEdit*>lineEditList = this->findChildren<QLineEdit*>();
-      foreach (QLineEdit* object, lineEditList) {
-          QString objectName = object->objectName();
-          object->setText(characterLoad.value(objectName).toString());
+        QList<QLineEdit*>lineEditList = this->findChildren<QLineEdit*>();
+        foreach (QLineEdit* object, lineEditList) {
+            QString objectName = object->objectName();
+            object->setText(characterLoad.value(objectName).toString());
 
         }
 
-      QList<QPlainTextEdit*>textEditList = this->findChildren<QPlainTextEdit*>();
-      foreach (QPlainTextEdit* object, textEditList) {
-          QString objectName = object->objectName();
-          object->setPlainText(characterLoad.value(objectName).toString());
+        QList<QTextEdit*>textEditList = this->findChildren<QTextEdit*>();
+        foreach (QTextEdit* object, textEditList) {
+            QString objectName = object->objectName();
+            object->setPlainText(characterLoad.value(objectName).toString());
         }
 
-      QList<QComboBox*>comboBoxList = this->findChildren<QComboBox*>();
-      foreach (QComboBox* object, comboBoxList) {
-          QString objectName = object->objectName();
-          object->setCurrentIndex(characterLoad.value(objectName).toInt());
+        QList<QComboBox*>comboBoxList = this->findChildren<QComboBox*>();
+        foreach (QComboBox* object, comboBoxList) {
+            QString objectName = object->objectName();
+            object->setCurrentIndex(characterLoad.value(objectName).toInt());
+        }
+
+        QList<QCheckBox*>checkBoxList = this->findChildren<QCheckBox*>();
+        foreach (QCheckBox* object, checkBoxList) {
+            QString objectName = object->objectName();
+            object->setChecked(characterLoad.value(objectName).toBool());
         }
     }
 }
@@ -1389,17 +1438,17 @@ void MainWindow::on_comboBox_Survival_activated(const QString &arg1)
 // Level Changed
 void MainWindow::on_lineEdit_CharLevel_textChanged(const QString &arg1)
 {
-  setProficiencyBonus(arg1);
+  setLevelBasedBonuses(arg1);
 }
 
 void MainWindow::on_lineEdit_CurrentHP_textChanged(const QString &arg1)
 {
-    if (arg1.toInt() > ui->lineEdit_MaximumHP->text().toInt()) {
-        ui->lineEdit_CurrentHP->setText(Braum.getCurrentHP());
-    }
-    else {
+//    if (arg1.toInt() > ui->lineEdit_MaximumHP->text().toInt()) {
+//        ui->lineEdit_CurrentHP->setText(Braum.getCurrentHP());
+//    }
+//    else {
         Braum.setCurrentHP(arg1);
-    }
+//    }
 }
 
 void MainWindow::on_lineEdit_MaximumHP_textChanged(const QString &arg1)
@@ -1411,7 +1460,7 @@ void MainWindow::on_lineEdit_MaximumHP_textChanged(const QString &arg1)
 
 void MainWindow::on_pushButton_SaveCharacter_released()
 {
-    saveCharacterSheet();
+    saveCharacterSheet(true);
 }
 
 void MainWindow::on_pushButton_LoadCharacter_released()

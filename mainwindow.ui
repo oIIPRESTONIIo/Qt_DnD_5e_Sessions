@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>560</width>
-    <height>993</height>
+    <width>561</width>
+    <height>1315</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -212,7 +212,7 @@ color: rgb(255, 255, 255);
            <attribute name="title">
             <string>Main</string>
            </attribute>
-           <layout class="QGridLayout" name="characterSheetMainTabLayout">
+           <layout class="QGridLayout" name="gridLayout_2">
             <property name="leftMargin">
              <number>0</number>
             </property>
@@ -229,17 +229,14 @@ color: rgb(255, 255, 255);
              <number>0</number>
             </property>
             <item row="0" column="0">
-             <layout class="QVBoxLayout" name="characterSheetMainLayout">
+             <layout class="QVBoxLayout" name="characterSheetMainMainLayout" stretch="1,2,4">
               <property name="spacing">
-               <number>5</number>
-              </property>
-              <property name="topMargin">
                <number>5</number>
               </property>
               <item>
                <layout class="QVBoxLayout" name="charDetailsLayout" stretch="0,0">
                 <property name="spacing">
-                 <number>0</number>
+                 <number>5</number>
                 </property>
                 <item>
                  <layout class="QHBoxLayout" name="infoLayout1" stretch="0,0,0">
@@ -630,19 +627,19 @@ color: rgb(255, 255, 255);
                </layout>
               </item>
               <item>
-               <layout class="QHBoxLayout" name="skillsSavesLayout" stretch="1,1">
+               <layout class="QHBoxLayout" name="scoresSavesSkillsLayout" stretch="3,2">
                 <property name="spacing">
-                 <number>20</number>
+                 <number>25</number>
                 </property>
                 <item>
-                 <layout class="QVBoxLayout" name="leftHandLayout" stretch="1,1,1,1,1,1,6">
+                 <layout class="QVBoxLayout" name="leftHandLayout" stretch="1,1,1,1,1,1">
                   <property name="spacing">
                    <number>5</number>
                   </property>
                   <item>
-                   <layout class="QHBoxLayout" name="scoresLayout1">
+                   <layout class="QHBoxLayout" name="scoresLayout1" stretch="2,1">
                     <property name="spacing">
-                     <number>0</number>
+                     <number>25</number>
                     </property>
                     <item>
                      <layout class="QVBoxLayout" name="strLayout1">
@@ -666,7 +663,7 @@ color: rgb(255, 255, 255);
                        </widget>
                       </item>
                       <item>
-                       <layout class="QHBoxLayout" name="strLayout2">
+                       <layout class="QHBoxLayout" name="strLayout2" stretch="1,1">
                         <property name="spacing">
                          <number>0</number>
                         </property>
@@ -706,7 +703,7 @@ color: rgb(255, 255, 255);
                         <item>
                          <widget class="QLineEdit" name="lineEdit_StrMod">
                           <property name="sizePolicy">
-                           <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+                           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
                             <horstretch>1</horstretch>
                             <verstretch>1</verstretch>
                            </sizepolicy>
@@ -726,7 +723,7 @@ color: rgb(255, 255, 255);
                            <number>2</number>
                           </property>
                           <property name="frame">
-                           <bool>false</bool>
+                           <bool>true</bool>
                           </property>
                           <property name="alignment">
                            <set>Qt::AlignCenter</set>
@@ -799,9 +796,9 @@ color: rgb(255, 255, 255);
                    </layout>
                   </item>
                   <item>
-                   <layout class="QHBoxLayout" name="scoresLayout2">
+                   <layout class="QHBoxLayout" name="scoresLayout2" stretch="2,1">
                     <property name="spacing">
-                     <number>0</number>
+                     <number>25</number>
                     </property>
                     <item>
                      <layout class="QVBoxLayout" name="dexLayout1">
@@ -825,7 +822,7 @@ color: rgb(255, 255, 255);
                        </widget>
                       </item>
                       <item>
-                       <layout class="QHBoxLayout" name="dexLayout2">
+                       <layout class="QHBoxLayout" name="dexLayout2" stretch="1,1">
                         <property name="spacing">
                          <number>0</number>
                         </property>
@@ -865,7 +862,7 @@ color: rgb(255, 255, 255);
                         <item>
                          <widget class="QLineEdit" name="lineEdit_DexMod">
                           <property name="sizePolicy">
-                           <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+                           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
                             <horstretch>1</horstretch>
                             <verstretch>1</verstretch>
                            </sizepolicy>
@@ -885,7 +882,7 @@ color: rgb(255, 255, 255);
                            <number>2</number>
                           </property>
                           <property name="frame">
-                           <bool>false</bool>
+                           <bool>true</bool>
                           </property>
                           <property name="alignment">
                            <set>Qt::AlignCenter</set>
@@ -943,7 +940,7 @@ color: rgb(255, 255, 255);
                          <number>2</number>
                         </property>
                         <property name="frame">
-                         <bool>false</bool>
+                         <bool>true</bool>
                         </property>
                         <property name="alignment">
                          <set>Qt::AlignCenter</set>
@@ -958,9 +955,9 @@ color: rgb(255, 255, 255);
                    </layout>
                   </item>
                   <item>
-                   <layout class="QHBoxLayout" name="scoresLayout3">
+                   <layout class="QHBoxLayout" name="scoresLayout3" stretch="2,1">
                     <property name="spacing">
-                     <number>0</number>
+                     <number>25</number>
                     </property>
                     <item>
                      <layout class="QVBoxLayout" name="conLayout1">
@@ -984,7 +981,7 @@ color: rgb(255, 255, 255);
                        </widget>
                       </item>
                       <item>
-                       <layout class="QHBoxLayout" name="conLayout2">
+                       <layout class="QHBoxLayout" name="conLayout2" stretch="1,1">
                         <property name="spacing">
                          <number>0</number>
                         </property>
@@ -1024,7 +1021,7 @@ color: rgb(255, 255, 255);
                         <item>
                          <widget class="QLineEdit" name="lineEdit_ConMod">
                           <property name="sizePolicy">
-                           <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+                           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
                             <horstretch>1</horstretch>
                             <verstretch>1</verstretch>
                            </sizepolicy>
@@ -1044,7 +1041,7 @@ color: rgb(255, 255, 255);
                            <number>2</number>
                           </property>
                           <property name="frame">
-                           <bool>false</bool>
+                           <bool>true</bool>
                           </property>
                           <property name="alignment">
                            <set>Qt::AlignCenter</set>
@@ -1117,9 +1114,9 @@ color: rgb(255, 255, 255);
                    </layout>
                   </item>
                   <item>
-                   <layout class="QHBoxLayout" name="scoresLayout4">
+                   <layout class="QHBoxLayout" name="scoresLayout4" stretch="2,1">
                     <property name="spacing">
-                     <number>0</number>
+                     <number>25</number>
                     </property>
                     <item>
                      <layout class="QVBoxLayout" name="intLayout1">
@@ -1143,7 +1140,7 @@ color: rgb(255, 255, 255);
                        </widget>
                       </item>
                       <item>
-                       <layout class="QHBoxLayout" name="intLayout2">
+                       <layout class="QHBoxLayout" name="intLayout2" stretch="1,1">
                         <property name="spacing">
                          <number>0</number>
                         </property>
@@ -1183,7 +1180,7 @@ color: rgb(255, 255, 255);
                         <item>
                          <widget class="QLineEdit" name="lineEdit_IntMod">
                           <property name="sizePolicy">
-                           <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+                           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
                             <horstretch>1</horstretch>
                             <verstretch>1</verstretch>
                            </sizepolicy>
@@ -1203,7 +1200,7 @@ color: rgb(255, 255, 255);
                            <number>2</number>
                           </property>
                           <property name="frame">
-                           <bool>false</bool>
+                           <bool>true</bool>
                           </property>
                           <property name="alignment">
                            <set>Qt::AlignCenter</set>
@@ -1261,7 +1258,7 @@ color: rgb(255, 255, 255);
                          <number>2</number>
                         </property>
                         <property name="frame">
-                         <bool>false</bool>
+                         <bool>true</bool>
                         </property>
                         <property name="alignment">
                          <set>Qt::AlignCenter</set>
@@ -1273,9 +1270,9 @@ color: rgb(255, 255, 255);
                    </layout>
                   </item>
                   <item>
-                   <layout class="QHBoxLayout" name="scoresLayout5">
+                   <layout class="QHBoxLayout" name="scoresLayout5" stretch="2,1">
                     <property name="spacing">
-                     <number>0</number>
+                     <number>25</number>
                     </property>
                     <item>
                      <layout class="QVBoxLayout" name="wisLayout1">
@@ -1299,7 +1296,7 @@ color: rgb(255, 255, 255);
                        </widget>
                       </item>
                       <item>
-                       <layout class="QHBoxLayout" name="wisLayout2">
+                       <layout class="QHBoxLayout" name="wisLayout2" stretch="1,1">
                         <property name="spacing">
                          <number>0</number>
                         </property>
@@ -1339,7 +1336,7 @@ color: rgb(255, 255, 255);
                         <item>
                          <widget class="QLineEdit" name="lineEdit_WisMod">
                           <property name="sizePolicy">
-                           <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+                           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
                             <horstretch>1</horstretch>
                             <verstretch>1</verstretch>
                            </sizepolicy>
@@ -1359,7 +1356,7 @@ color: rgb(255, 255, 255);
                            <number>2</number>
                           </property>
                           <property name="frame">
-                           <bool>false</bool>
+                           <bool>true</bool>
                           </property>
                           <property name="alignment">
                            <set>Qt::AlignCenter</set>
@@ -1432,9 +1429,9 @@ color: rgb(255, 255, 255);
                    </layout>
                   </item>
                   <item>
-                   <layout class="QHBoxLayout" name="scoresLayout6">
+                   <layout class="QHBoxLayout" name="scoresLayout6" stretch="2,1">
                     <property name="spacing">
-                     <number>0</number>
+                     <number>25</number>
                     </property>
                     <item>
                      <layout class="QVBoxLayout" name="chaLayout1">
@@ -1458,7 +1455,7 @@ color: rgb(255, 255, 255);
                        </widget>
                       </item>
                       <item>
-                       <layout class="QHBoxLayout" name="chaLayout2">
+                       <layout class="QHBoxLayout" name="chaLayout2" stretch="1,1">
                         <property name="spacing">
                          <number>0</number>
                         </property>
@@ -1498,7 +1495,7 @@ color: rgb(255, 255, 255);
                         <item>
                          <widget class="QLineEdit" name="lineEdit_ChaMod">
                           <property name="sizePolicy">
-                           <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+                           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
                             <horstretch>1</horstretch>
                             <verstretch>1</verstretch>
                            </sizepolicy>
@@ -1518,7 +1515,7 @@ color: rgb(255, 255, 255);
                            <number>2</number>
                           </property>
                           <property name="frame">
-                           <bool>false</bool>
+                           <bool>true</bool>
                           </property>
                           <property name="alignment">
                            <set>Qt::AlignCenter</set>
@@ -1590,52 +1587,17 @@ color: rgb(255, 255, 255);
                     </item>
                    </layout>
                   </item>
-                  <item>
-                   <layout class="QVBoxLayout" name="additionalProficienciesLayout">
-                    <property name="spacing">
-                     <number>5</number>
-                    </property>
-                    <item>
-                     <widget class="QLabel" name="label_AdditionalProficiencies">
-                      <property name="font">
-                       <font>
-                        <family>Nirmala UI</family>
-                        <pointsize>8</pointsize>
-                       </font>
-                      </property>
-                      <property name="text">
-                       <string>Additional Proficiencies</string>
-                      </property>
-                      <property name="alignment">
-                       <set>Qt::AlignCenter</set>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <widget class="QTextEdit" name="textEdit_AdditionalProficiencies">
-                      <property name="font">
-                       <font>
-                        <family>Nirmala UI</family>
-                       </font>
-                      </property>
-                      <property name="styleSheet">
-                       <string notr="true">background-color: rgb(210, 210, 210);</string>
-                      </property>
-                     </widget>
-                    </item>
-                   </layout>
-                  </item>
                  </layout>
                 </item>
                 <item>
                  <layout class="QVBoxLayout" name="rightHandLayout" stretch="1,3">
                   <property name="spacing">
-                   <number>0</number>
+                   <number>5</number>
                   </property>
                   <item>
-                   <layout class="QVBoxLayout" name="savesLayout1" stretch="0,1">
+                   <layout class="QVBoxLayout" name="savesLayout1" stretch="1,3">
                     <property name="spacing">
-                     <number>0</number>
+                     <number>5</number>
                     </property>
                     <item>
                      <widget class="QLabel" name="label_SavingThrows">
@@ -1660,19 +1622,19 @@ color: rgb(255, 255, 255);
                      </widget>
                     </item>
                     <item>
-                     <layout class="QHBoxLayout" name="savesLayout2">
+                     <layout class="QHBoxLayout" name="savesLayout2" stretch="1,2,2">
                       <property name="spacing">
                        <number>0</number>
                       </property>
                       <item>
-                       <layout class="QVBoxLayout" name="savesComboBoxLayout">
+                       <layout class="QVBoxLayout" name="savesComboBoxLayout" stretch="1,1,1,1,1,1">
                         <property name="spacing">
                          <number>5</number>
                         </property>
                         <item>
                          <widget class="QComboBox" name="comboBox_StrSave">
                           <property name="sizePolicy">
-                           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                           <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
                             <horstretch>1</horstretch>
                             <verstretch>1</verstretch>
                            </sizepolicy>
@@ -1719,7 +1681,7 @@ border-color: rgb(210, 201, 210);</string>
                         <item>
                          <widget class="QComboBox" name="comboBox_DexSave">
                           <property name="sizePolicy">
-                           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                           <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
                             <horstretch>1</horstretch>
                             <verstretch>1</verstretch>
                            </sizepolicy>
@@ -1766,7 +1728,7 @@ border-color: rgb(210, 201, 210);</string>
                         <item>
                          <widget class="QComboBox" name="comboBox_ConSave">
                           <property name="sizePolicy">
-                           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                           <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
                             <horstretch>1</horstretch>
                             <verstretch>1</verstretch>
                            </sizepolicy>
@@ -1813,7 +1775,7 @@ border-color: rgb(210, 201, 210);</string>
                         <item>
                          <widget class="QComboBox" name="comboBox_IntSave">
                           <property name="sizePolicy">
-                           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                           <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
                             <horstretch>1</horstretch>
                             <verstretch>1</verstretch>
                            </sizepolicy>
@@ -1860,7 +1822,7 @@ border-color: rgb(210, 201, 210);</string>
                         <item>
                          <widget class="QComboBox" name="comboBox_WisSave">
                           <property name="sizePolicy">
-                           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                           <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
                             <horstretch>1</horstretch>
                             <verstretch>1</verstretch>
                            </sizepolicy>
@@ -1907,7 +1869,7 @@ border-color: rgb(210, 201, 210);</string>
                         <item>
                          <widget class="QComboBox" name="comboBox_ChaSave">
                           <property name="sizePolicy">
-                           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                           <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
                             <horstretch>1</horstretch>
                             <verstretch>1</verstretch>
                            </sizepolicy>
@@ -1954,14 +1916,14 @@ border-color: rgb(210, 201, 210);</string>
                        </layout>
                       </item>
                       <item>
-                       <layout class="QVBoxLayout" name="savesValueLayout">
+                       <layout class="QVBoxLayout" name="savesValueLayout" stretch="1,1,1,1,1,1">
                         <property name="spacing">
-                         <number>0</number>
+                         <number>5</number>
                         </property>
                         <item>
                          <widget class="QLineEdit" name="lineEdit_StrSave">
                           <property name="sizePolicy">
-                           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                           <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
                             <horstretch>1</horstretch>
                             <verstretch>1</verstretch>
                            </sizepolicy>
@@ -1991,7 +1953,7 @@ border-color: rgb(210, 201, 210);</string>
                            <number>3</number>
                           </property>
                           <property name="frame">
-                           <bool>false</bool>
+                           <bool>true</bool>
                           </property>
                           <property name="alignment">
                            <set>Qt::AlignCenter</set>
@@ -2004,7 +1966,7 @@ border-color: rgb(210, 201, 210);</string>
                         <item>
                          <widget class="QLineEdit" name="lineEdit_DexSave">
                           <property name="sizePolicy">
-                           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                           <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
                             <horstretch>1</horstretch>
                             <verstretch>1</verstretch>
                            </sizepolicy>
@@ -2034,7 +1996,7 @@ border-color: rgb(210, 201, 210);</string>
                            <number>3</number>
                           </property>
                           <property name="frame">
-                           <bool>false</bool>
+                           <bool>true</bool>
                           </property>
                           <property name="alignment">
                            <set>Qt::AlignCenter</set>
@@ -2047,7 +2009,7 @@ border-color: rgb(210, 201, 210);</string>
                         <item>
                          <widget class="QLineEdit" name="lineEdit_ConSave">
                           <property name="sizePolicy">
-                           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                           <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
                             <horstretch>1</horstretch>
                             <verstretch>1</verstretch>
                            </sizepolicy>
@@ -2077,7 +2039,7 @@ border-color: rgb(210, 201, 210);</string>
                            <number>3</number>
                           </property>
                           <property name="frame">
-                           <bool>false</bool>
+                           <bool>true</bool>
                           </property>
                           <property name="alignment">
                            <set>Qt::AlignCenter</set>
@@ -2090,7 +2052,7 @@ border-color: rgb(210, 201, 210);</string>
                         <item>
                          <widget class="QLineEdit" name="lineEdit_IntSave">
                           <property name="sizePolicy">
-                           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                           <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
                             <horstretch>1</horstretch>
                             <verstretch>1</verstretch>
                            </sizepolicy>
@@ -2120,7 +2082,7 @@ border-color: rgb(210, 201, 210);</string>
                            <number>3</number>
                           </property>
                           <property name="frame">
-                           <bool>false</bool>
+                           <bool>true</bool>
                           </property>
                           <property name="alignment">
                            <set>Qt::AlignCenter</set>
@@ -2133,7 +2095,7 @@ border-color: rgb(210, 201, 210);</string>
                         <item>
                          <widget class="QLineEdit" name="lineEdit_WisSave">
                           <property name="sizePolicy">
-                           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                           <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
                             <horstretch>1</horstretch>
                             <verstretch>1</verstretch>
                            </sizepolicy>
@@ -2163,7 +2125,7 @@ border-color: rgb(210, 201, 210);</string>
                            <number>3</number>
                           </property>
                           <property name="frame">
-                           <bool>false</bool>
+                           <bool>true</bool>
                           </property>
                           <property name="alignment">
                            <set>Qt::AlignCenter</set>
@@ -2176,7 +2138,7 @@ border-color: rgb(210, 201, 210);</string>
                         <item>
                          <widget class="QLineEdit" name="lineEdit_ChaSave">
                           <property name="sizePolicy">
-                           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                           <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
                             <horstretch>1</horstretch>
                             <verstretch>1</verstretch>
                            </sizepolicy>
@@ -2206,7 +2168,7 @@ border-color: rgb(210, 201, 210);</string>
                            <number>3</number>
                           </property>
                           <property name="frame">
-                           <bool>false</bool>
+                           <bool>true</bool>
                           </property>
                           <property name="alignment">
                            <set>Qt::AlignCenter</set>
@@ -2219,14 +2181,14 @@ border-color: rgb(210, 201, 210);</string>
                        </layout>
                       </item>
                       <item>
-                       <layout class="QVBoxLayout" name="savesLabelLayout">
+                       <layout class="QVBoxLayout" name="savesLabelLayout" stretch="1,1,1,1,1,1">
                         <property name="spacing">
-                         <number>0</number>
+                         <number>5</number>
                         </property>
                         <item>
                          <widget class="QLabel" name="label_StrSave">
                           <property name="sizePolicy">
-                           <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
                             <horstretch>1</horstretch>
                             <verstretch>1</verstretch>
                            </sizepolicy>
@@ -2241,14 +2203,14 @@ border-color: rgb(210, 201, 210);</string>
                            <string>Strength</string>
                           </property>
                           <property name="alignment">
-                           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                           <set>Qt::AlignCenter</set>
                           </property>
                          </widget>
                         </item>
                         <item>
                          <widget class="QLabel" name="label_DexSave">
                           <property name="sizePolicy">
-                           <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
                             <horstretch>1</horstretch>
                             <verstretch>1</verstretch>
                            </sizepolicy>
@@ -2263,14 +2225,14 @@ border-color: rgb(210, 201, 210);</string>
                            <string>Dexterity</string>
                           </property>
                           <property name="alignment">
-                           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                           <set>Qt::AlignCenter</set>
                           </property>
                          </widget>
                         </item>
                         <item>
                          <widget class="QLabel" name="label_ConSave">
                           <property name="sizePolicy">
-                           <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
                             <horstretch>1</horstretch>
                             <verstretch>1</verstretch>
                            </sizepolicy>
@@ -2285,14 +2247,14 @@ border-color: rgb(210, 201, 210);</string>
                            <string>Constitution</string>
                           </property>
                           <property name="alignment">
-                           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                           <set>Qt::AlignCenter</set>
                           </property>
                          </widget>
                         </item>
                         <item>
                          <widget class="QLabel" name="label_IntSave">
                           <property name="sizePolicy">
-                           <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
                             <horstretch>1</horstretch>
                             <verstretch>1</verstretch>
                            </sizepolicy>
@@ -2307,14 +2269,14 @@ border-color: rgb(210, 201, 210);</string>
                            <string>Intelligence</string>
                           </property>
                           <property name="alignment">
-                           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                           <set>Qt::AlignCenter</set>
                           </property>
                          </widget>
                         </item>
                         <item>
                          <widget class="QLabel" name="label_WisSave">
                           <property name="sizePolicy">
-                           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                           <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
                             <horstretch>1</horstretch>
                             <verstretch>1</verstretch>
                            </sizepolicy>
@@ -2329,14 +2291,14 @@ border-color: rgb(210, 201, 210);</string>
                            <string>Wisdom</string>
                           </property>
                           <property name="alignment">
-                           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                           <set>Qt::AlignCenter</set>
                           </property>
                          </widget>
                         </item>
                         <item>
                          <widget class="QLabel" name="label_ChaSave">
                           <property name="sizePolicy">
-                           <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
                             <horstretch>1</horstretch>
                             <verstretch>1</verstretch>
                            </sizepolicy>
@@ -2351,7 +2313,7 @@ border-color: rgb(210, 201, 210);</string>
                            <string>Charisma</string>
                           </property>
                           <property name="alignment">
-                           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                           <set>Qt::AlignCenter</set>
                           </property>
                          </widget>
                         </item>
@@ -2362,9 +2324,9 @@ border-color: rgb(210, 201, 210);</string>
                    </layout>
                   </item>
                   <item>
-                   <layout class="QVBoxLayout" name="skillsLayout1" stretch="0,1">
+                   <layout class="QVBoxLayout" name="skillsLayout1" stretch="1,3">
                     <property name="spacing">
-                     <number>0</number>
+                     <number>5</number>
                     </property>
                     <item>
                      <widget class="QLabel" name="label_Skills">
@@ -2392,19 +2354,19 @@ border-color: rgb(210, 201, 210);</string>
                      </widget>
                     </item>
                     <item>
-                     <layout class="QHBoxLayout" name="skillsLayout2">
+                     <layout class="QHBoxLayout" name="skillsLayout2" stretch="1,2,2">
                       <property name="spacing">
                        <number>0</number>
                       </property>
                       <item>
-                       <layout class="QVBoxLayout" name="skillsComboBoxLayout">
+                       <layout class="QVBoxLayout" name="skillsComboBoxLayout" stretch="1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1">
                         <property name="spacing">
                          <number>5</number>
                         </property>
                         <item>
                          <widget class="QComboBox" name="comboBox_Acrobatics">
                           <property name="sizePolicy">
-                           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                           <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
                             <horstretch>1</horstretch>
                             <verstretch>1</verstretch>
                            </sizepolicy>
@@ -2451,7 +2413,7 @@ border-color: rgb(210, 201, 210);</string>
                         <item>
                          <widget class="QComboBox" name="comboBox_AnimalHandling">
                           <property name="sizePolicy">
-                           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                           <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
                             <horstretch>1</horstretch>
                             <verstretch>1</verstretch>
                            </sizepolicy>
@@ -2498,7 +2460,7 @@ border-color: rgb(210, 201, 210);</string>
                         <item>
                          <widget class="QComboBox" name="comboBox_Arcana">
                           <property name="sizePolicy">
-                           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                           <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
                             <horstretch>1</horstretch>
                             <verstretch>1</verstretch>
                            </sizepolicy>
@@ -2545,7 +2507,7 @@ border-color: rgb(210, 201, 210);</string>
                         <item>
                          <widget class="QComboBox" name="comboBox_Athletics">
                           <property name="sizePolicy">
-                           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                           <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
                             <horstretch>1</horstretch>
                             <verstretch>1</verstretch>
                            </sizepolicy>
@@ -2592,7 +2554,7 @@ border-color: rgb(210, 201, 210);</string>
                         <item>
                          <widget class="QComboBox" name="comboBox_Deception">
                           <property name="sizePolicy">
-                           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                           <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
                             <horstretch>1</horstretch>
                             <verstretch>1</verstretch>
                            </sizepolicy>
@@ -2639,7 +2601,7 @@ border-color: rgb(210, 201, 210);</string>
                         <item>
                          <widget class="QComboBox" name="comboBox_History">
                           <property name="sizePolicy">
-                           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                           <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
                             <horstretch>1</horstretch>
                             <verstretch>1</verstretch>
                            </sizepolicy>
@@ -2686,7 +2648,7 @@ border-color: rgb(210, 201, 210);</string>
                         <item>
                          <widget class="QComboBox" name="comboBox_Insight">
                           <property name="sizePolicy">
-                           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                           <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
                             <horstretch>1</horstretch>
                             <verstretch>1</verstretch>
                            </sizepolicy>
@@ -2733,7 +2695,7 @@ border-color: rgb(210, 201, 210);</string>
                         <item>
                          <widget class="QComboBox" name="comboBox_Intimidation">
                           <property name="sizePolicy">
-                           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                           <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
                             <horstretch>1</horstretch>
                             <verstretch>1</verstretch>
                            </sizepolicy>
@@ -2780,7 +2742,7 @@ border-color: rgb(210, 201, 210);</string>
                         <item>
                          <widget class="QComboBox" name="comboBox_Investigation">
                           <property name="sizePolicy">
-                           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                           <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
                             <horstretch>1</horstretch>
                             <verstretch>1</verstretch>
                            </sizepolicy>
@@ -2827,7 +2789,7 @@ border-color: rgb(210, 201, 210);</string>
                         <item>
                          <widget class="QComboBox" name="comboBox_Medicine">
                           <property name="sizePolicy">
-                           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                           <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
                             <horstretch>1</horstretch>
                             <verstretch>1</verstretch>
                            </sizepolicy>
@@ -2874,7 +2836,7 @@ border-color: rgb(210, 201, 210);</string>
                         <item>
                          <widget class="QComboBox" name="comboBox_Nature">
                           <property name="sizePolicy">
-                           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                           <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
                             <horstretch>1</horstretch>
                             <verstretch>1</verstretch>
                            </sizepolicy>
@@ -2921,7 +2883,7 @@ border-color: rgb(210, 201, 210);</string>
                         <item>
                          <widget class="QComboBox" name="comboBox_Perception">
                           <property name="sizePolicy">
-                           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                           <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
                             <horstretch>1</horstretch>
                             <verstretch>1</verstretch>
                            </sizepolicy>
@@ -2968,7 +2930,7 @@ border-color: rgb(210, 201, 210);</string>
                         <item>
                          <widget class="QComboBox" name="comboBox_Performance">
                           <property name="sizePolicy">
-                           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                           <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
                             <horstretch>1</horstretch>
                             <verstretch>1</verstretch>
                            </sizepolicy>
@@ -3015,7 +2977,7 @@ border-color: rgb(210, 201, 210);</string>
                         <item>
                          <widget class="QComboBox" name="comboBox_Persuasion">
                           <property name="sizePolicy">
-                           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                           <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
                             <horstretch>1</horstretch>
                             <verstretch>1</verstretch>
                            </sizepolicy>
@@ -3062,7 +3024,7 @@ border-color: rgb(210, 201, 210);</string>
                         <item>
                          <widget class="QComboBox" name="comboBox_Religion">
                           <property name="sizePolicy">
-                           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                           <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
                             <horstretch>1</horstretch>
                             <verstretch>1</verstretch>
                            </sizepolicy>
@@ -3109,7 +3071,7 @@ border-color: rgb(210, 201, 210);</string>
                         <item>
                          <widget class="QComboBox" name="comboBox_SleightOfHand">
                           <property name="sizePolicy">
-                           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                           <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
                             <horstretch>1</horstretch>
                             <verstretch>1</verstretch>
                            </sizepolicy>
@@ -3156,7 +3118,7 @@ border-color: rgb(210, 201, 210);</string>
                         <item>
                          <widget class="QComboBox" name="comboBox_Stealth">
                           <property name="sizePolicy">
-                           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                           <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
                             <horstretch>1</horstretch>
                             <verstretch>1</verstretch>
                            </sizepolicy>
@@ -3203,7 +3165,7 @@ border-color: rgb(210, 201, 210);</string>
                         <item>
                          <widget class="QComboBox" name="comboBox_Survival">
                           <property name="sizePolicy">
-                           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                           <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
                             <horstretch>1</horstretch>
                             <verstretch>1</verstretch>
                            </sizepolicy>
@@ -3250,14 +3212,14 @@ border-color: rgb(210, 201, 210);</string>
                        </layout>
                       </item>
                       <item>
-                       <layout class="QVBoxLayout" name="skillsValueLayout">
+                       <layout class="QVBoxLayout" name="skillsValueLayout" stretch="1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1">
                         <property name="spacing">
-                         <number>0</number>
+                         <number>5</number>
                         </property>
                         <item>
                          <widget class="QLineEdit" name="lineEdit_Acrobatics">
                           <property name="sizePolicy">
-                           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                           <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
                             <horstretch>1</horstretch>
                             <verstretch>1</verstretch>
                            </sizepolicy>
@@ -3287,7 +3249,7 @@ border-color: rgb(210, 201, 210);</string>
                            <number>3</number>
                           </property>
                           <property name="frame">
-                           <bool>false</bool>
+                           <bool>true</bool>
                           </property>
                           <property name="alignment">
                            <set>Qt::AlignCenter</set>
@@ -3300,7 +3262,7 @@ border-color: rgb(210, 201, 210);</string>
                         <item>
                          <widget class="QLineEdit" name="lineEdit_AnimalHandling">
                           <property name="sizePolicy">
-                           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                           <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
                             <horstretch>1</horstretch>
                             <verstretch>1</verstretch>
                            </sizepolicy>
@@ -3330,7 +3292,7 @@ border-color: rgb(210, 201, 210);</string>
                            <number>3</number>
                           </property>
                           <property name="frame">
-                           <bool>false</bool>
+                           <bool>true</bool>
                           </property>
                           <property name="alignment">
                            <set>Qt::AlignCenter</set>
@@ -3343,7 +3305,7 @@ border-color: rgb(210, 201, 210);</string>
                         <item>
                          <widget class="QLineEdit" name="lineEdit_Arcana">
                           <property name="sizePolicy">
-                           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                           <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
                             <horstretch>1</horstretch>
                             <verstretch>1</verstretch>
                            </sizepolicy>
@@ -3373,7 +3335,7 @@ border-color: rgb(210, 201, 210);</string>
                            <number>3</number>
                           </property>
                           <property name="frame">
-                           <bool>false</bool>
+                           <bool>true</bool>
                           </property>
                           <property name="alignment">
                            <set>Qt::AlignCenter</set>
@@ -3386,7 +3348,7 @@ border-color: rgb(210, 201, 210);</string>
                         <item>
                          <widget class="QLineEdit" name="lineEdit_Athletics">
                           <property name="sizePolicy">
-                           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                           <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
                             <horstretch>1</horstretch>
                             <verstretch>1</verstretch>
                            </sizepolicy>
@@ -3416,7 +3378,7 @@ border-color: rgb(210, 201, 210);</string>
                            <number>3</number>
                           </property>
                           <property name="frame">
-                           <bool>false</bool>
+                           <bool>true</bool>
                           </property>
                           <property name="alignment">
                            <set>Qt::AlignCenter</set>
@@ -3429,7 +3391,7 @@ border-color: rgb(210, 201, 210);</string>
                         <item>
                          <widget class="QLineEdit" name="lineEdit_Deception">
                           <property name="sizePolicy">
-                           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                           <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
                             <horstretch>1</horstretch>
                             <verstretch>1</verstretch>
                            </sizepolicy>
@@ -3459,7 +3421,7 @@ border-color: rgb(210, 201, 210);</string>
                            <number>3</number>
                           </property>
                           <property name="frame">
-                           <bool>false</bool>
+                           <bool>true</bool>
                           </property>
                           <property name="alignment">
                            <set>Qt::AlignCenter</set>
@@ -3472,7 +3434,7 @@ border-color: rgb(210, 201, 210);</string>
                         <item>
                          <widget class="QLineEdit" name="lineEdit_History">
                           <property name="sizePolicy">
-                           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                           <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
                             <horstretch>1</horstretch>
                             <verstretch>1</verstretch>
                            </sizepolicy>
@@ -3502,7 +3464,7 @@ border-color: rgb(210, 201, 210);</string>
                            <number>3</number>
                           </property>
                           <property name="frame">
-                           <bool>false</bool>
+                           <bool>true</bool>
                           </property>
                           <property name="alignment">
                            <set>Qt::AlignCenter</set>
@@ -3515,7 +3477,7 @@ border-color: rgb(210, 201, 210);</string>
                         <item>
                          <widget class="QLineEdit" name="lineEdit_Insight">
                           <property name="sizePolicy">
-                           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                           <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
                             <horstretch>1</horstretch>
                             <verstretch>1</verstretch>
                            </sizepolicy>
@@ -3545,7 +3507,7 @@ border-color: rgb(210, 201, 210);</string>
                            <number>3</number>
                           </property>
                           <property name="frame">
-                           <bool>false</bool>
+                           <bool>true</bool>
                           </property>
                           <property name="alignment">
                            <set>Qt::AlignCenter</set>
@@ -3558,7 +3520,7 @@ border-color: rgb(210, 201, 210);</string>
                         <item>
                          <widget class="QLineEdit" name="lineEdit_Intimidation">
                           <property name="sizePolicy">
-                           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                           <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
                             <horstretch>1</horstretch>
                             <verstretch>1</verstretch>
                            </sizepolicy>
@@ -3588,7 +3550,7 @@ border-color: rgb(210, 201, 210);</string>
                            <number>3</number>
                           </property>
                           <property name="frame">
-                           <bool>false</bool>
+                           <bool>true</bool>
                           </property>
                           <property name="alignment">
                            <set>Qt::AlignCenter</set>
@@ -3601,7 +3563,7 @@ border-color: rgb(210, 201, 210);</string>
                         <item>
                          <widget class="QLineEdit" name="lineEdit_Investigation">
                           <property name="sizePolicy">
-                           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                           <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
                             <horstretch>1</horstretch>
                             <verstretch>1</verstretch>
                            </sizepolicy>
@@ -3631,7 +3593,7 @@ border-color: rgb(210, 201, 210);</string>
                            <number>3</number>
                           </property>
                           <property name="frame">
-                           <bool>false</bool>
+                           <bool>true</bool>
                           </property>
                           <property name="alignment">
                            <set>Qt::AlignCenter</set>
@@ -3644,7 +3606,7 @@ border-color: rgb(210, 201, 210);</string>
                         <item>
                          <widget class="QLineEdit" name="lineEdit_Medicine">
                           <property name="sizePolicy">
-                           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                           <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
                             <horstretch>1</horstretch>
                             <verstretch>1</verstretch>
                            </sizepolicy>
@@ -3674,7 +3636,7 @@ border-color: rgb(210, 201, 210);</string>
                            <number>3</number>
                           </property>
                           <property name="frame">
-                           <bool>false</bool>
+                           <bool>true</bool>
                           </property>
                           <property name="alignment">
                            <set>Qt::AlignCenter</set>
@@ -3687,7 +3649,7 @@ border-color: rgb(210, 201, 210);</string>
                         <item>
                          <widget class="QLineEdit" name="lineEdit_Nature">
                           <property name="sizePolicy">
-                           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                           <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
                             <horstretch>1</horstretch>
                             <verstretch>1</verstretch>
                            </sizepolicy>
@@ -3717,7 +3679,7 @@ border-color: rgb(210, 201, 210);</string>
                            <number>3</number>
                           </property>
                           <property name="frame">
-                           <bool>false</bool>
+                           <bool>true</bool>
                           </property>
                           <property name="alignment">
                            <set>Qt::AlignCenter</set>
@@ -3730,7 +3692,7 @@ border-color: rgb(210, 201, 210);</string>
                         <item>
                          <widget class="QLineEdit" name="lineEdit_Perception">
                           <property name="sizePolicy">
-                           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                           <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
                             <horstretch>1</horstretch>
                             <verstretch>1</verstretch>
                            </sizepolicy>
@@ -3760,7 +3722,7 @@ border-color: rgb(210, 201, 210);</string>
                            <number>3</number>
                           </property>
                           <property name="frame">
-                           <bool>false</bool>
+                           <bool>true</bool>
                           </property>
                           <property name="alignment">
                            <set>Qt::AlignCenter</set>
@@ -3773,7 +3735,7 @@ border-color: rgb(210, 201, 210);</string>
                         <item>
                          <widget class="QLineEdit" name="lineEdit_Performance">
                           <property name="sizePolicy">
-                           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                           <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
                             <horstretch>1</horstretch>
                             <verstretch>1</verstretch>
                            </sizepolicy>
@@ -3803,7 +3765,7 @@ border-color: rgb(210, 201, 210);</string>
                            <number>3</number>
                           </property>
                           <property name="frame">
-                           <bool>false</bool>
+                           <bool>true</bool>
                           </property>
                           <property name="alignment">
                            <set>Qt::AlignCenter</set>
@@ -3816,7 +3778,7 @@ border-color: rgb(210, 201, 210);</string>
                         <item>
                          <widget class="QLineEdit" name="lineEdit_Persuasion">
                           <property name="sizePolicy">
-                           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                           <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
                             <horstretch>1</horstretch>
                             <verstretch>1</verstretch>
                            </sizepolicy>
@@ -3846,7 +3808,7 @@ border-color: rgb(210, 201, 210);</string>
                            <number>3</number>
                           </property>
                           <property name="frame">
-                           <bool>false</bool>
+                           <bool>true</bool>
                           </property>
                           <property name="alignment">
                            <set>Qt::AlignCenter</set>
@@ -3859,7 +3821,7 @@ border-color: rgb(210, 201, 210);</string>
                         <item>
                          <widget class="QLineEdit" name="lineEdit_Religion">
                           <property name="sizePolicy">
-                           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                           <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
                             <horstretch>1</horstretch>
                             <verstretch>1</verstretch>
                            </sizepolicy>
@@ -3889,7 +3851,7 @@ border-color: rgb(210, 201, 210);</string>
                            <number>3</number>
                           </property>
                           <property name="frame">
-                           <bool>false</bool>
+                           <bool>true</bool>
                           </property>
                           <property name="alignment">
                            <set>Qt::AlignCenter</set>
@@ -3902,7 +3864,7 @@ border-color: rgb(210, 201, 210);</string>
                         <item>
                          <widget class="QLineEdit" name="lineEdit_SleightOfHand">
                           <property name="sizePolicy">
-                           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                           <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
                             <horstretch>1</horstretch>
                             <verstretch>1</verstretch>
                            </sizepolicy>
@@ -3932,7 +3894,7 @@ border-color: rgb(210, 201, 210);</string>
                            <number>3</number>
                           </property>
                           <property name="frame">
-                           <bool>false</bool>
+                           <bool>true</bool>
                           </property>
                           <property name="alignment">
                            <set>Qt::AlignCenter</set>
@@ -3945,7 +3907,7 @@ border-color: rgb(210, 201, 210);</string>
                         <item>
                          <widget class="QLineEdit" name="lineEdit_Stealth">
                           <property name="sizePolicy">
-                           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                           <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
                             <horstretch>1</horstretch>
                             <verstretch>1</verstretch>
                            </sizepolicy>
@@ -3975,7 +3937,7 @@ border-color: rgb(210, 201, 210);</string>
                            <number>3</number>
                           </property>
                           <property name="frame">
-                           <bool>false</bool>
+                           <bool>true</bool>
                           </property>
                           <property name="alignment">
                            <set>Qt::AlignCenter</set>
@@ -3988,7 +3950,7 @@ border-color: rgb(210, 201, 210);</string>
                         <item>
                          <widget class="QLineEdit" name="lineEdit_Survival">
                           <property name="sizePolicy">
-                           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                           <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
                             <horstretch>1</horstretch>
                             <verstretch>1</verstretch>
                            </sizepolicy>
@@ -4018,7 +3980,7 @@ border-color: rgb(210, 201, 210);</string>
                            <number>3</number>
                           </property>
                           <property name="frame">
-                           <bool>false</bool>
+                           <bool>true</bool>
                           </property>
                           <property name="alignment">
                            <set>Qt::AlignCenter</set>
@@ -4031,14 +3993,14 @@ border-color: rgb(210, 201, 210);</string>
                        </layout>
                       </item>
                       <item>
-                       <layout class="QVBoxLayout" name="skillsLabelLayout">
+                       <layout class="QVBoxLayout" name="skillsLabelLayout" stretch="1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1">
                         <property name="spacing">
-                         <number>0</number>
+                         <number>5</number>
                         </property>
                         <item>
                          <widget class="QLabel" name="label_Acrobatics">
                           <property name="sizePolicy">
-                           <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
                             <horstretch>1</horstretch>
                             <verstretch>1</verstretch>
                            </sizepolicy>
@@ -4053,14 +4015,14 @@ border-color: rgb(210, 201, 210);</string>
                            <string>Acrobatics</string>
                           </property>
                           <property name="alignment">
-                           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                           <set>Qt::AlignCenter</set>
                           </property>
                          </widget>
                         </item>
                         <item>
                          <widget class="QLabel" name="label_AnimalHandling">
                           <property name="sizePolicy">
-                           <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
                             <horstretch>1</horstretch>
                             <verstretch>1</verstretch>
                            </sizepolicy>
@@ -4075,14 +4037,14 @@ border-color: rgb(210, 201, 210);</string>
                            <string>Animal Handling</string>
                           </property>
                           <property name="alignment">
-                           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                           <set>Qt::AlignCenter</set>
                           </property>
                          </widget>
                         </item>
                         <item>
                          <widget class="QLabel" name="label_Arcana">
                           <property name="sizePolicy">
-                           <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
                             <horstretch>1</horstretch>
                             <verstretch>1</verstretch>
                            </sizepolicy>
@@ -4097,14 +4059,14 @@ border-color: rgb(210, 201, 210);</string>
                            <string>Arcana</string>
                           </property>
                           <property name="alignment">
-                           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                           <set>Qt::AlignCenter</set>
                           </property>
                          </widget>
                         </item>
                         <item>
                          <widget class="QLabel" name="label_Athletics">
                           <property name="sizePolicy">
-                           <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
                             <horstretch>1</horstretch>
                             <verstretch>1</verstretch>
                            </sizepolicy>
@@ -4119,14 +4081,14 @@ border-color: rgb(210, 201, 210);</string>
                            <string>Athletics</string>
                           </property>
                           <property name="alignment">
-                           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                           <set>Qt::AlignCenter</set>
                           </property>
                          </widget>
                         </item>
                         <item>
                          <widget class="QLabel" name="label_Deception">
                           <property name="sizePolicy">
-                           <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
                             <horstretch>1</horstretch>
                             <verstretch>1</verstretch>
                            </sizepolicy>
@@ -4141,14 +4103,14 @@ border-color: rgb(210, 201, 210);</string>
                            <string>Deception</string>
                           </property>
                           <property name="alignment">
-                           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                           <set>Qt::AlignCenter</set>
                           </property>
                          </widget>
                         </item>
                         <item>
                          <widget class="QLabel" name="label_History">
                           <property name="sizePolicy">
-                           <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
                             <horstretch>1</horstretch>
                             <verstretch>1</verstretch>
                            </sizepolicy>
@@ -4163,14 +4125,14 @@ border-color: rgb(210, 201, 210);</string>
                            <string>History</string>
                           </property>
                           <property name="alignment">
-                           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                           <set>Qt::AlignCenter</set>
                           </property>
                          </widget>
                         </item>
                         <item>
                          <widget class="QLabel" name="label_Insight">
                           <property name="sizePolicy">
-                           <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
                             <horstretch>1</horstretch>
                             <verstretch>1</verstretch>
                            </sizepolicy>
@@ -4185,14 +4147,14 @@ border-color: rgb(210, 201, 210);</string>
                            <string>Insight</string>
                           </property>
                           <property name="alignment">
-                           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                           <set>Qt::AlignCenter</set>
                           </property>
                          </widget>
                         </item>
                         <item>
                          <widget class="QLabel" name="label_Intimidation">
                           <property name="sizePolicy">
-                           <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
                             <horstretch>1</horstretch>
                             <verstretch>1</verstretch>
                            </sizepolicy>
@@ -4207,14 +4169,14 @@ border-color: rgb(210, 201, 210);</string>
                            <string>Intimidation</string>
                           </property>
                           <property name="alignment">
-                           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                           <set>Qt::AlignCenter</set>
                           </property>
                          </widget>
                         </item>
                         <item>
                          <widget class="QLabel" name="label_Investigation">
                           <property name="sizePolicy">
-                           <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
                             <horstretch>1</horstretch>
                             <verstretch>1</verstretch>
                            </sizepolicy>
@@ -4229,14 +4191,14 @@ border-color: rgb(210, 201, 210);</string>
                            <string>Investigation</string>
                           </property>
                           <property name="alignment">
-                           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                           <set>Qt::AlignCenter</set>
                           </property>
                          </widget>
                         </item>
                         <item>
                          <widget class="QLabel" name="label_Medicine">
                           <property name="sizePolicy">
-                           <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
                             <horstretch>1</horstretch>
                             <verstretch>1</verstretch>
                            </sizepolicy>
@@ -4251,14 +4213,14 @@ border-color: rgb(210, 201, 210);</string>
                            <string>Medicine</string>
                           </property>
                           <property name="alignment">
-                           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                           <set>Qt::AlignCenter</set>
                           </property>
                          </widget>
                         </item>
                         <item>
                          <widget class="QLabel" name="label_Nature">
                           <property name="sizePolicy">
-                           <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
                             <horstretch>1</horstretch>
                             <verstretch>1</verstretch>
                            </sizepolicy>
@@ -4273,14 +4235,14 @@ border-color: rgb(210, 201, 210);</string>
                            <string>Nature</string>
                           </property>
                           <property name="alignment">
-                           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                           <set>Qt::AlignCenter</set>
                           </property>
                          </widget>
                         </item>
                         <item>
                          <widget class="QLabel" name="label_Perception">
                           <property name="sizePolicy">
-                           <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
                             <horstretch>1</horstretch>
                             <verstretch>1</verstretch>
                            </sizepolicy>
@@ -4295,14 +4257,14 @@ border-color: rgb(210, 201, 210);</string>
                            <string>Perception</string>
                           </property>
                           <property name="alignment">
-                           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                           <set>Qt::AlignCenter</set>
                           </property>
                          </widget>
                         </item>
                         <item>
                          <widget class="QLabel" name="label_Performance">
                           <property name="sizePolicy">
-                           <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
                             <horstretch>1</horstretch>
                             <verstretch>1</verstretch>
                            </sizepolicy>
@@ -4317,14 +4279,14 @@ border-color: rgb(210, 201, 210);</string>
                            <string>Performance</string>
                           </property>
                           <property name="alignment">
-                           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                           <set>Qt::AlignCenter</set>
                           </property>
                          </widget>
                         </item>
                         <item>
                          <widget class="QLabel" name="label_Persuasion">
                           <property name="sizePolicy">
-                           <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
                             <horstretch>1</horstretch>
                             <verstretch>1</verstretch>
                            </sizepolicy>
@@ -4339,14 +4301,14 @@ border-color: rgb(210, 201, 210);</string>
                            <string>Persuasion</string>
                           </property>
                           <property name="alignment">
-                           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                           <set>Qt::AlignCenter</set>
                           </property>
                          </widget>
                         </item>
                         <item>
                          <widget class="QLabel" name="label_Religion">
                           <property name="sizePolicy">
-                           <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
                             <horstretch>1</horstretch>
                             <verstretch>1</verstretch>
                            </sizepolicy>
@@ -4361,14 +4323,14 @@ border-color: rgb(210, 201, 210);</string>
                            <string>Religion</string>
                           </property>
                           <property name="alignment">
-                           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                           <set>Qt::AlignCenter</set>
                           </property>
                          </widget>
                         </item>
                         <item>
                          <widget class="QLabel" name="label_SleightOfHand">
                           <property name="sizePolicy">
-                           <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
                             <horstretch>1</horstretch>
                             <verstretch>1</verstretch>
                            </sizepolicy>
@@ -4383,14 +4345,14 @@ border-color: rgb(210, 201, 210);</string>
                            <string>SleightOfHand</string>
                           </property>
                           <property name="alignment">
-                           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                           <set>Qt::AlignCenter</set>
                           </property>
                          </widget>
                         </item>
                         <item>
                          <widget class="QLabel" name="label_Stealth">
                           <property name="sizePolicy">
-                           <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
                             <horstretch>1</horstretch>
                             <verstretch>1</verstretch>
                            </sizepolicy>
@@ -4405,14 +4367,14 @@ border-color: rgb(210, 201, 210);</string>
                            <string>Stealth</string>
                           </property>
                           <property name="alignment">
-                           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                           <set>Qt::AlignCenter</set>
                           </property>
                          </widget>
                         </item>
                         <item>
                          <widget class="QLabel" name="label_Survival">
                           <property name="sizePolicy">
-                           <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+                           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
                             <horstretch>1</horstretch>
                             <verstretch>1</verstretch>
                            </sizepolicy>
@@ -4427,7 +4389,7 @@ border-color: rgb(210, 201, 210);</string>
                            <string>Survival</string>
                           </property>
                           <property name="alignment">
-                           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                           <set>Qt::AlignCenter</set>
                           </property>
                          </widget>
                         </item>
@@ -4441,6 +4403,50 @@ border-color: rgb(210, 201, 210);</string>
                 </item>
                </layout>
               </item>
+              <item>
+               <layout class="QVBoxLayout" name="additionalProficienciesLayout" stretch="0,1">
+                <property name="spacing">
+                 <number>5</number>
+                </property>
+                <property name="topMargin">
+                 <number>5</number>
+                </property>
+                <item>
+                 <widget class="QLabel" name="label_AdditionalProficiencies">
+                  <property name="font">
+                   <font>
+                    <family>Nirmala UI</family>
+                    <pointsize>8</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>Additional Proficiencies</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QTextEdit" name="textEdit_AdditionalProficiencies">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                    <horstretch>1</horstretch>
+                    <verstretch>1</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <family>Nirmala UI</family>
+                   </font>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: rgb(210, 210, 210);</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
              </layout>
             </item>
            </layout>
@@ -4449,7 +4455,7 @@ border-color: rgb(210, 201, 210);</string>
            <attribute name="title">
             <string>Combat</string>
            </attribute>
-           <layout class="QGridLayout" name="charcterSheetCombatLayout">
+           <layout class="QGridLayout" name="gridLayout_3">
             <property name="leftMargin">
              <number>0</number>
             </property>
@@ -4466,12 +4472,12 @@ border-color: rgb(210, 201, 210);</string>
              <number>0</number>
             </property>
             <item row="0" column="0">
-             <layout class="QVBoxLayout" name="characterSheetCombatMainLayout" stretch="0,0,1,1">
+             <layout class="QVBoxLayout" name="characterSheetCombatLayout" stretch="1,1,1,8,8">
               <property name="spacing">
                <number>5</number>
               </property>
               <item>
-               <layout class="QVBoxLayout" name="HPLayout1">
+               <layout class="QVBoxLayout" name="HPLayout1" stretch="0,2">
                 <property name="spacing">
                  <number>5</number>
                 </property>
@@ -4499,9 +4505,9 @@ border-color: rgb(210, 201, 210);</string>
                    <number>0</number>
                   </property>
                   <item>
-                   <layout class="QVBoxLayout" name="currentHPLayout" stretch="0,1">
+                   <layout class="QVBoxLayout" name="currentHPLayout" stretch="0,0">
                     <property name="spacing">
-                     <number>0</number>
+                     <number>5</number>
                     </property>
                     <item>
                      <widget class="QLabel" name="label_CurrentHP">
@@ -4520,28 +4526,21 @@ border-color: rgb(210, 201, 210);</string>
                     </item>
                     <item>
                      <widget class="QLineEdit" name="lineEdit_CurrentHP">
-                      <property name="sizePolicy">
-                       <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
-                        <horstretch>0</horstretch>
-                        <verstretch>0</verstretch>
-                       </sizepolicy>
-                      </property>
                       <property name="font">
                        <font>
                         <family>Nirmala UI</family>
                         <pointsize>16</pointsize>
-                        <weight>50</weight>
-                        <bold>false</bold>
                        </font>
                       </property>
                       <property name="styleSheet">
-                       <string notr="true">background-color: rgb(210, 210, 210);</string>
+                       <string notr="true">background-color: rgb(210, 210, 210);
+</string>
                       </property>
                       <property name="text">
                        <string>0</string>
                       </property>
                       <property name="maxLength">
-                       <number>2</number>
+                       <number>3</number>
                       </property>
                       <property name="frame">
                        <bool>false</bool>
@@ -4556,7 +4555,7 @@ border-color: rgb(210, 201, 210);</string>
                   <item>
                    <layout class="QVBoxLayout" name="maximumHPLayout" stretch="0,1">
                     <property name="spacing">
-                     <number>0</number>
+                     <number>5</number>
                     </property>
                     <item>
                      <widget class="QLabel" name="label_MaximumHP">
@@ -4596,7 +4595,7 @@ border-color: rgb(210, 201, 210);</string>
                        <string>0</string>
                       </property>
                       <property name="maxLength">
-                       <number>2</number>
+                       <number>3</number>
                       </property>
                       <property name="frame">
                        <bool>false</bool>
@@ -4611,7 +4610,7 @@ border-color: rgb(210, 201, 210);</string>
                   <item>
                    <layout class="QVBoxLayout" name="temporaryHPLayout" stretch="0,1">
                     <property name="spacing">
-                     <number>0</number>
+                     <number>5</number>
                     </property>
                     <item>
                      <widget class="QLabel" name="label_TemporaryHP">
@@ -4670,12 +4669,12 @@ border-color: rgb(210, 201, 210);</string>
               <item>
                <layout class="QHBoxLayout" name="spellsAttackLayout">
                 <property name="spacing">
-                 <number>0</number>
+                 <number>5</number>
                 </property>
                 <item>
                  <layout class="QHBoxLayout" name="spellAttackBonusLayout">
                   <property name="spacing">
-                   <number>0</number>
+                   <number>5</number>
                   </property>
                   <item>
                    <widget class="QLabel" name="spellAttackBonusLabel">
@@ -4704,7 +4703,7 @@ border-color: rgb(210, 201, 210);</string>
                      <string>+0</string>
                     </property>
                     <property name="frame">
-                     <bool>false</bool>
+                     <bool>true</bool>
                     </property>
                     <property name="alignment">
                      <set>Qt::AlignCenter</set>
@@ -4742,10 +4741,10 @@ border-color: rgb(210, 201, 210);</string>
                      </font>
                     </property>
                     <property name="text">
-                     <string>8</string>
+                     <string>10</string>
                     </property>
                     <property name="frame">
-                     <bool>false</bool>
+                     <bool>true</bool>
                     </property>
                     <property name="alignment">
                      <set>Qt::AlignCenter</set>
@@ -4760,8 +4759,291 @@ border-color: rgb(210, 201, 210);</string>
                </layout>
               </item>
               <item>
+               <layout class="QHBoxLayout" name="hitDiceDeathSavesLayout" stretch="1,1">
+                <property name="spacing">
+                 <number>5</number>
+                </property>
+                <item>
+                 <layout class="QVBoxLayout" name="hitdiceLayout1" stretch="1,1">
+                  <property name="spacing">
+                   <number>5</number>
+                  </property>
+                  <item>
+                   <layout class="QHBoxLayout" name="hitDiceLayout2">
+                    <property name="spacing">
+                     <number>5</number>
+                    </property>
+                    <item>
+                     <widget class="QLabel" name="hitDiceLabel">
+                      <property name="font">
+                       <font>
+                        <family>Nirmala UI</family>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string>Hit Dice</string>
+                      </property>
+                      <property name="alignment">
+                       <set>Qt::AlignCenter</set>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QLineEdit" name="lineEdit_HitDiceType">
+                      <property name="font">
+                       <font>
+                        <family>Nirmala UI</family>
+                        <pointsize>16</pointsize>
+                       </font>
+                      </property>
+                      <property name="frame">
+                       <bool>true</bool>
+                      </property>
+                      <property name="alignment">
+                       <set>Qt::AlignCenter</set>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </item>
+                  <item>
+                   <layout class="QHBoxLayout" name="diceTotalsLayout" stretch="0,1,0,1">
+                    <property name="spacing">
+                     <number>5</number>
+                    </property>
+                    <item>
+                     <widget class="QLabel" name="hitDiceCurrentLabel">
+                      <property name="font">
+                       <font>
+                        <family>Nirmala UI</family>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string>Current</string>
+                      </property>
+                      <property name="alignment">
+                       <set>Qt::AlignJustify|Qt::AlignVCenter</set>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QLineEdit" name="lineEdit_HitDiceCurrent">
+                      <property name="font">
+                       <font>
+                        <family>Nirmala UI</family>
+                        <pointsize>16</pointsize>
+                       </font>
+                      </property>
+                      <property name="alignment">
+                       <set>Qt::AlignCenter</set>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QLabel" name="hitDiceMaximumLabel">
+                      <property name="font">
+                       <font>
+                        <family>Nirmala UI</family>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string>Maximum</string>
+                      </property>
+                      <property name="alignment">
+                       <set>Qt::AlignJustify|Qt::AlignVCenter</set>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QLineEdit" name="lineEdit_HitDiceMaximum">
+                      <property name="font">
+                       <font>
+                        <family>Nirmala UI</family>
+                        <pointsize>16</pointsize>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string>1</string>
+                      </property>
+                      <property name="alignment">
+                       <set>Qt::AlignCenter</set>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <layout class="QVBoxLayout" name="deathSavesLayout" stretch="1,1,1">
+                  <property name="spacing">
+                   <number>5</number>
+                  </property>
+                  <item>
+                   <widget class="QLabel" name="deathSavesLabel">
+                    <property name="font">
+                     <font>
+                      <family>Nirmala UI</family>
+                     </font>
+                    </property>
+                    <property name="text">
+                     <string>Death Saves</string>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignCenter</set>
+                    </property>
+                    <property name="margin">
+                     <number>0</number>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <layout class="QHBoxLayout" name="sucessesLayout" stretch="2,1,1,1">
+                    <property name="spacing">
+                     <number>0</number>
+                    </property>
+                    <property name="leftMargin">
+                     <number>25</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>25</number>
+                    </property>
+                    <item>
+                     <widget class="QLabel" name="deathSavesSuccessesLabel">
+                      <property name="font">
+                       <font>
+                        <family>Nirmala UI</family>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string>Successes</string>
+                      </property>
+                      <property name="alignment">
+                       <set>Qt::AlignCenter</set>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QCheckBox" name="checkBox_DeathSavesSuccesses1">
+                      <property name="font">
+                       <font>
+                        <family>Nirmala UI</family>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                      <property name="checked">
+                       <bool>false</bool>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QCheckBox" name="checkBox_DeathSavesSuccesses2">
+                      <property name="font">
+                       <font>
+                        <family>Nirmala UI</family>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QCheckBox" name="checkBox_DeathSavesSuccesses3">
+                      <property name="font">
+                       <font>
+                        <family>Nirmala UI</family>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                      <property name="checked">
+                       <bool>false</bool>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </item>
+                  <item>
+                   <layout class="QHBoxLayout" name="failuresLayout" stretch="2,1,1,1">
+                    <property name="spacing">
+                     <number>0</number>
+                    </property>
+                    <property name="leftMargin">
+                     <number>25</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>25</number>
+                    </property>
+                    <item>
+                     <widget class="QLabel" name="deathSavesFailuresLabel">
+                      <property name="font">
+                       <font>
+                        <family>Nirmala UI</family>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string>Failures</string>
+                      </property>
+                      <property name="alignment">
+                       <set>Qt::AlignCenter</set>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QCheckBox" name="checkBox_DeathSavesFailures1">
+                      <property name="font">
+                       <font>
+                        <family>Nirmala UI</family>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QCheckBox" name="checkBox_DeathSavesFailures2">
+                      <property name="font">
+                       <font>
+                        <family>Nirmala UI</family>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                      <property name="checked">
+                       <bool>false</bool>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QCheckBox" name="checkBox_DeathSavesFailures3">
+                      <property name="font">
+                       <font>
+                        <family>Nirmala UI</family>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </item>
+                 </layout>
+                </item>
+               </layout>
+              </item>
+              <item>
                <layout class="QVBoxLayout" name="attackWorkspaceLayout" stretch="0,1">
                 <property name="spacing">
+                 <number>5</number>
+                </property>
+                <property name="topMargin">
                  <number>5</number>
                 </property>
                 <item>
@@ -4775,7 +5057,7 @@ border-color: rgb(210, 201, 210);</string>
                  </widget>
                 </item>
                 <item>
-                 <layout class="QHBoxLayout" name="attackWorkspaceLayout2" stretch="1,1,1,1,1,1">
+                 <layout class="QHBoxLayout" name="attackWorkspaceLayout2" stretch="0,2,0,1,2,2">
                   <property name="spacing">
                    <number>0</number>
                   </property>
@@ -6516,6 +6798,9 @@ border-color: rgb(210, 201, 210);</string>
                 <property name="spacing">
                  <number>5</number>
                 </property>
+                <property name="topMargin">
+                 <number>5</number>
+                </property>
                 <item>
                  <widget class="QLabel" name="classFeaturesLabel">
                   <property name="font">
@@ -6532,11 +6817,14 @@ border-color: rgb(210, 201, 210);</string>
                  </widget>
                 </item>
                 <item>
-                 <widget class="QPlainTextEdit" name="textEdit_ClassFeatures">
+                 <widget class="QTextEdit" name="textEdit_ClassFeatures">
                   <property name="font">
                    <font>
                     <family>Nirmala UI</family>
                    </font>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: rgb(210, 210, 210);</string>
                   </property>
                  </widget>
                 </item>
@@ -6567,7 +6855,7 @@ border-color: rgb(210, 201, 210);</string>
              <number>0</number>
             </property>
             <item row="0" column="0">
-             <layout class="QVBoxLayout" name="equipmentLayout" stretch="5,1">
+             <layout class="QVBoxLayout" name="equipmentLayout" stretch="8,1">
               <property name="spacing">
                <number>0</number>
               </property>
@@ -6595,7 +6883,16 @@ border-color: rgb(210, 201, 210);</string>
                  </widget>
                 </item>
                 <item>
-                 <widget class="QPlainTextEdit" name="plainTextEdit_Equipment"/>
+                 <widget class="QTextEdit" name="textEdit_Equipment">
+                  <property name="font">
+                   <font>
+                    <family>Nirmala UI</family>
+                   </font>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: rgb(210, 210, 210);</string>
+                  </property>
+                 </widget>
                 </item>
                </layout>
               </item>
@@ -6639,8 +6936,17 @@ border-color: rgb(210, 201, 210);</string>
                       <verstretch>0</verstretch>
                      </sizepolicy>
                     </property>
+                    <property name="font">
+                     <font>
+                      <family>Nirmala UI</family>
+                      <pointsize>16</pointsize>
+                     </font>
+                    </property>
+                    <property name="text">
+                     <string>0</string>
+                    </property>
                     <property name="frame">
-                     <bool>false</bool>
+                     <bool>true</bool>
                     </property>
                     <property name="alignment">
                      <set>Qt::AlignCenter</set>
@@ -6683,8 +6989,17 @@ border-color: rgb(210, 201, 210);</string>
                       <verstretch>0</verstretch>
                      </sizepolicy>
                     </property>
+                    <property name="font">
+                     <font>
+                      <family>Nirmala UI</family>
+                      <pointsize>16</pointsize>
+                     </font>
+                    </property>
+                    <property name="text">
+                     <string>0</string>
+                    </property>
                     <property name="frame">
-                     <bool>false</bool>
+                     <bool>true</bool>
                     </property>
                     <property name="alignment">
                      <set>Qt::AlignCenter</set>
@@ -6727,8 +7042,17 @@ border-color: rgb(210, 201, 210);</string>
                       <verstretch>0</verstretch>
                      </sizepolicy>
                     </property>
+                    <property name="font">
+                     <font>
+                      <family>Nirmala UI</family>
+                      <pointsize>16</pointsize>
+                     </font>
+                    </property>
+                    <property name="text">
+                     <string>0</string>
+                    </property>
                     <property name="frame">
-                     <bool>false</bool>
+                     <bool>true</bool>
                     </property>
                     <property name="alignment">
                      <set>Qt::AlignCenter</set>
@@ -6771,8 +7095,17 @@ border-color: rgb(210, 201, 210);</string>
                       <verstretch>0</verstretch>
                      </sizepolicy>
                     </property>
+                    <property name="font">
+                     <font>
+                      <family>Nirmala UI</family>
+                      <pointsize>16</pointsize>
+                     </font>
+                    </property>
+                    <property name="text">
+                     <string>0</string>
+                    </property>
                     <property name="frame">
-                     <bool>false</bool>
+                     <bool>true</bool>
                     </property>
                     <property name="alignment">
                      <set>Qt::AlignCenter</set>
@@ -6815,8 +7148,17 @@ border-color: rgb(210, 201, 210);</string>
                       <verstretch>0</verstretch>
                      </sizepolicy>
                     </property>
+                    <property name="font">
+                     <font>
+                      <family>Nirmala UI</family>
+                      <pointsize>16</pointsize>
+                     </font>
+                    </property>
+                    <property name="text">
+                     <string>0</string>
+                    </property>
                     <property name="frame">
-                     <bool>false</bool>
+                     <bool>true</bool>
                     </property>
                     <property name="alignment">
                      <set>Qt::AlignCenter</set>
@@ -6856,7 +7198,7 @@ border-color: rgb(210, 201, 210);</string>
               <item>
                <layout class="QVBoxLayout" name="charDetailsLayout1">
                 <property name="spacing">
-                 <number>0</number>
+                 <number>5</number>
                 </property>
                 <item>
                  <layout class="QHBoxLayout" name="charDetailsLayout2">
@@ -6872,6 +7214,9 @@ border-color: rgb(210, 201, 210);</string>
                         <family>Nirmala UI</family>
                         <pointsize>16</pointsize>
                        </font>
+                      </property>
+                      <property name="text">
+                       <string/>
                       </property>
                       <property name="alignment">
                        <set>Qt::AlignCenter</set>
@@ -7084,11 +7429,14 @@ border-color: rgb(210, 201, 210);</string>
                  </widget>
                 </item>
                 <item>
-                 <widget class="QPlainTextEdit" name="plainTextEdit_PersonalityTraits">
+                 <widget class="QTextEdit" name="textEdit_PersonalityTraits">
                   <property name="font">
                    <font>
                     <family>Nirmala UI</family>
                    </font>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: rgb(210, 210, 210);</string>
                   </property>
                  </widget>
                 </item>
@@ -7112,11 +7460,14 @@ border-color: rgb(210, 201, 210);</string>
                  </widget>
                 </item>
                 <item>
-                 <widget class="QPlainTextEdit" name="plainTextEdit_Ideals">
+                 <widget class="QTextEdit" name="textEdit_Ideals">
                   <property name="font">
                    <font>
                     <family>Nirmala UI</family>
                    </font>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: rgb(210, 210, 210);</string>
                   </property>
                  </widget>
                 </item>
@@ -7140,11 +7491,14 @@ border-color: rgb(210, 201, 210);</string>
                  </widget>
                 </item>
                 <item>
-                 <widget class="QPlainTextEdit" name="plainTextEdit_Bonds">
+                 <widget class="QTextEdit" name="textEdit_Bonds">
                   <property name="font">
                    <font>
                     <family>Nirmala UI</family>
                    </font>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: rgb(210, 210, 210);</string>
                   </property>
                  </widget>
                 </item>
@@ -7168,11 +7522,14 @@ border-color: rgb(210, 201, 210);</string>
                  </widget>
                 </item>
                 <item>
-                 <widget class="QPlainTextEdit" name="plainTextEdit_Flaws">
+                 <widget class="QTextEdit" name="textEdit_Flaws">
                   <property name="font">
                    <font>
                     <family>Nirmala UI</family>
                    </font>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: rgb(210, 210, 210);</string>
                   </property>
                  </widget>
                 </item>
@@ -7204,6 +7561,12 @@ border-color: rgb(210, 201, 210);</string>
             </property>
             <item row="0" column="0">
              <layout class="QVBoxLayout" name="detailedFeaturesLayout">
+              <property name="spacing">
+               <number>5</number>
+              </property>
+              <property name="topMargin">
+               <number>5</number>
+              </property>
               <item>
                <widget class="QLabel" name="detailedFeaturesLabel">
                 <property name="font">
@@ -7220,11 +7583,14 @@ border-color: rgb(210, 201, 210);</string>
                </widget>
               </item>
               <item>
-               <widget class="QPlainTextEdit" name="plainTextEdit_DetailedFeatures">
+               <widget class="QTextEdit" name="textEdit_DetailedFeatures">
                 <property name="font">
                  <font>
                   <family>Nirmala UI</family>
                  </font>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">background-color: rgb(210, 210, 210);</string>
                 </property>
                </widget>
               </item>

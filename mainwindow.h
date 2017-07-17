@@ -30,7 +30,7 @@ private:
 public:
     void platformSetup();
     void editableBoxFormatting();
-    void setProficiencyBonus(QString level);
+    void setLevelBasedBonuses(QString level);
     void setSkillBonuses();
     void setStrBonuses();
     void setDexBonuses();
@@ -43,7 +43,7 @@ public:
     void saveItem(QLineEdit *item);
     void saveItem(QPlainTextEdit *item);
     void saveItem(QComboBox *item);
-    void saveCharacterSheet();
+    void saveCharacterSheet(bool initialSaveComplete);
     void resetCharacterSheet();
     void loadCharacterSheet();
     void writeToFile(QFile &outputFile, QByteArray writeBuffer);

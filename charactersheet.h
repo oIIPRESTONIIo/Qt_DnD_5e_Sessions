@@ -171,8 +171,8 @@ private:
     QString mCurrentHP = "0";
     QString mHitDiceType = "1dX";
     QString mHitDiceNumber = "1";
-    QString mSpellAttackBonus = "0";
-    QString mSpellSaveDC = "9";
+    QString mSpellAttackBonus = "+0";
+    QString mSpellSaveDC = "10";
 
     QString mProficiency = "+2";
     QString mStrength = "10";
