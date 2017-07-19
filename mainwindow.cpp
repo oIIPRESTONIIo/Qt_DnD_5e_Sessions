@@ -1561,3 +1561,20 @@ void MainWindow::on_comboBox_Gov10_activated(const QString &arg1)
 {
     setAttackBonuses();
 }
+
+
+// Networking
+void MainWindow::on_pushButton_HostSession_released()
+{
+    hostSession();
+}
+
+void MainWindow::hostSession()
+{
+    QTcpServer server;
+}
+
+void MainWindow::joinSession(){
+
+
+}

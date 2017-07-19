@@ -75,7 +75,7 @@ color: rgb(255, 255, 255);
        <enum>QTabWidget::North</enum>
       </property>
       <property name="currentIndex">
-       <number>1</number>
+       <number>0</number>
       </property>
       <property name="movable">
        <bool>true</bool>
@@ -84,7 +84,7 @@ color: rgb(255, 255, 255);
        <attribute name="title">
         <string>Main Menu</string>
        </attribute>
-       <layout class="QGridLayout" name="gridLayout_6" rowstretch="1,1,1,1" rowminimumheight="1,1,1,1">
+       <layout class="QGridLayout" name="gridLayout_6" rowstretch="1,1,1,1,0" rowminimumheight="1,1,1,1,0">
         <property name="leftMargin">
          <number>20</number>
         </property>
@@ -103,7 +103,7 @@ color: rgb(255, 255, 255);
         <property name="verticalSpacing">
          <number>20</number>
         </property>
-        <item row="0" column="0">
+        <item row="1" column="0">
          <widget class="QPushButton" name="pushButton_DesktopMode">
           <property name="sizePolicy">
            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
@@ -116,8 +116,8 @@ color: rgb(255, 255, 255);
           </property>
          </widget>
         </item>
-        <item row="1" column="0">
-         <widget class="QPushButton" name="pushButton_SaveCharacter">
+        <item row="4" column="0">
+         <widget class="QPushButton" name="pushButton_LoadCharacter">
           <property name="sizePolicy">
            <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
             <horstretch>0</horstretch>
@@ -125,11 +125,11 @@ color: rgb(255, 255, 255);
            </sizepolicy>
           </property>
           <property name="text">
-           <string>Save Character</string>
+           <string>Load Character</string>
           </property>
          </widget>
         </item>
-        <item row="2" column="0">
+        <item row="3" column="0">
          <widget class="QPushButton" name="pushButton_ResetCharacter">
           <property name="sizePolicy">
            <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
@@ -142,8 +142,8 @@ color: rgb(255, 255, 255);
           </property>
          </widget>
         </item>
-        <item row="3" column="0">
-         <widget class="QPushButton" name="pushButton_LoadCharacter">
+        <item row="2" column="0">
+         <widget class="QPushButton" name="pushButton_SaveCharacter">
           <property name="sizePolicy">
            <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
             <horstretch>0</horstretch>
@@ -151,7 +151,20 @@ color: rgb(255, 255, 255);
            </sizepolicy>
           </property>
           <property name="text">
-           <string>Load Character</string>
+           <string>Save Character</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QPushButton" name="pushButton_HostSession">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>Host a session</string>
           </property>
          </widget>
         </item>

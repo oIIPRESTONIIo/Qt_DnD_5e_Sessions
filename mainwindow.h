@@ -12,6 +12,8 @@
 #include <QComboBox>
 #include <QFileDialog>
 #include <QMessageBox>
+#include <QTcpServer>
+#include <QtWebSockets/QWebSocket>
 
 namespace Ui {
 class MainWindow;
@@ -48,6 +50,9 @@ public:
     void resetCharacterSheet();
     void loadCharacterSheet();
     void writeToFile(QFile &outputFile, QByteArray writeBuffer);
+
+    void hostSession();
+    void joinSession();
 
 private:
     std::map<int, int> mModifierTable;
@@ -127,6 +132,9 @@ private slots:
     void on_comboBox_Gov8_activated(const QString &arg1);
     void on_comboBox_Gov9_activated(const QString &arg1);
     void on_comboBox_Gov10_activated(const QString &arg1);
+
+
+    void on_pushButton_HostSession_released();
 };
 
 #endif // MAINWINDOW_H
