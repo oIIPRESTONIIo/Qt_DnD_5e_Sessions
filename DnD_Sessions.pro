@@ -1,6 +1,6 @@
 #-------------------------------------------------
 #
-# Project created by QtCreator 2017-07-03T13:56:31
+# Project created by QtCreator 2017-07-18T10:12:12
 #
 #-------------------------------------------------
 
@@ -8,7 +8,7 @@ QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-TARGET = Qt_DnD_5e_Sessions
+TARGET = DnD_Sessions
 TEMPLATE = app
 
 # The following define makes your compiler emit warnings if you use
@@ -22,33 +22,16 @@ DEFINES += QT_DEPRECATED_WARNINGS
 # You can also select to disable deprecated APIs only up to a certain version of Qt.
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
+
 SOURCES += \
         main.cpp \
         mainwindow.cpp \
-        charactersheet.cpp
+    charactersheet.cpp
 
 HEADERS += \
         mainwindow.h \
-        charactersheet.h
+    charactersheet.h
 
 FORMS += \
-        mainwindow.ui
-
-CONFIG += mobility
-MOBILITY = 
-
-CONFIG += C++11
-
-DISTFILES += \
-    android/AndroidManifest.xml \
-    android/gradle/wrapper/gradle-wrapper.jar \
-    android/gradlew \
-    android/res/values/libs.xml \
-    android/build.gradle \
-    android/gradle/wrapper/gradle-wrapper.properties \
-    android/gradlew.bat \
-    android/AndroidManifest.xml \
-    android/res/values/libs.xml \
-    android/build.gradle
-
-ANDROID_PACKAGE_SOURCE_DIR = $$PWD/android
+        mainwindow.ui \
+    mainwindowdesktop.ui

@@ -1054,11 +1054,6 @@ void MainWindow::saveCharacterSheet(bool initialSaveComplete){
             characterSave.setValue(objectName, object->currentIndex());
         }
 
-        QList<QCheckBox*>checkBoxList = this->findChildren<QCheckBox*>();
-        foreach (QCheckBox* object, checkBoxList) {
-            QString objectName = object->objectName();
-            characterSave.setValue(objectName, object->isChecked());
-        }
     } else {
 
         QSettings characterSave("default.ini", QSettings::IniFormat);
@@ -1079,13 +1074,6 @@ void MainWindow::saveCharacterSheet(bool initialSaveComplete){
         foreach (QComboBox* object, comboBoxList) {
             QString objectName = object->objectName();
             characterSave.setValue(objectName, object->currentIndex());
-        }
-
-        QList<QCheckBox*>checkBoxList = this->findChildren<QCheckBox*>();
-        foreach (QCheckBox* object, checkBoxList) {
-            QString objectName = object->objectName();
-            characterSave.setValue(objectName, object->isChecked());
-
         }
     }
 }
@@ -1113,11 +1101,6 @@ void MainWindow::resetCharacterSheet(){
     foreach (QComboBox* object, comboBoxList) {
         QString objectName = object->objectName();
         object->setCurrentIndex(characterLoad.value(objectName).toInt());
-    }
-    QList<QCheckBox*>checkBoxList = this->findChildren<QCheckBox*>();
-    foreach (QCheckBox* object, checkBoxList) {
-        QString objectName = object->objectName();
-        object->setChecked(characterLoad.value(objectName).toBool());
     }
 }
 
@@ -1154,26 +1137,20 @@ void MainWindow::loadCharacterSheet(){
             QString objectName = object->objectName();
             object->setCurrentIndex(characterLoad.value(objectName).toInt());
         }
-
-        QList<QCheckBox*>checkBoxList = this->findChildren<QCheckBox*>();
-        foreach (QCheckBox* object, checkBoxList) {
-            QString objectName = object->objectName();
-            object->setChecked(characterLoad.value(objectName).toBool());
-        }
     }
 }
 
 
 // Slots for UI elements
 //Ability Scores Changed
-void MainWindow::on_lineEdit_StrScore_textChanged(const QString &arg1)
+void MainWindow::on_lineEdit_StrScore_editingFinished()
 {
-  QString score = arg1;
-  QString mod = Braum.calculateAbilityModifier(arg1);
+  QString score = ui->lineEdit_StrScore->text();
+  QString mod = Braum.calculateAbilityModifier(score);
   Braum.setStrength(score);
   Braum.setStrMod(mod);
 
-  if (&arg1 == QString("")) {
+  if (score == QString("")) {
       ui->lineEdit_StrMod->setText("-5");
     }
   else if (score.toInt() >= 10) {
@@ -1184,14 +1161,14 @@ void MainWindow::on_lineEdit_StrScore_textChanged(const QString &arg1)
     }
 }
 
-void MainWindow::on_lineEdit_DexScore_textChanged(const QString &arg1)
+void MainWindow::on_lineEdit_DexScore_editingFinished()
 {
-  QString score = arg1;
-  QString mod = Braum.calculateAbilityModifier(arg1);
+  QString score = ui->lineEdit_DexScore->text();
+  QString mod = Braum.calculateAbilityModifier(score);
   Braum.setDexterity(score);
   Braum.setDexMod(mod);
 
-  if (&arg1 == QString("")) {
+  if (score == QString("")) {
       ui->lineEdit_DexMod->setText("-5");
     }
   else if (score.toInt() >= 10) {
@@ -1202,14 +1179,14 @@ void MainWindow::on_lineEdit_DexScore_textChanged(const QString &arg1)
     }
 }
 
-void MainWindow::on_lineEdit_ConScore_textChanged(const QString &arg1)
+void MainWindow::on_lineEdit_ConScore_editingFinished()
 {
-  QString score = arg1;
-  QString mod = Braum.calculateAbilityModifier(arg1);
+  QString score = ui->lineEdit_ConScore->text();
+  QString mod = Braum.calculateAbilityModifier(score);
   Braum.setConstitution(score);
   Braum.setConMod(mod);
 
-  if (&arg1 == QString("")) {
+  if (score == QString("")) {
       ui->lineEdit_ConMod->setText("-5");
     }
   else if (score.toInt() >= 10) {
@@ -1220,14 +1197,14 @@ void MainWindow::on_lineEdit_ConScore_textChanged(const QString &arg1)
     }
 }
 
-void MainWindow::on_lineEdit_IntScore_textChanged(const QString &arg1)
+void MainWindow::on_lineEdit_IntScore_editingFinished()
 {
-  QString score = arg1;
-  QString mod = Braum.calculateAbilityModifier(arg1);
+  QString score = ui->lineEdit_IntScore->text();
+  QString mod = Braum.calculateAbilityModifier(score);
   Braum.setIntelligence(score);
   Braum.setIntMod(mod);
 
-  if (&arg1 == QString("")) {
+  if (score == QString("")) {
       ui->lineEdit_IntMod->setText("-5");
     }
   else if (score.toInt() >= 10) {
@@ -1238,14 +1215,14 @@ void MainWindow::on_lineEdit_IntScore_textChanged(const QString &arg1)
     }
 }
 
-void MainWindow::on_lineEdit_WisScore_textChanged(const QString &arg1)
+void MainWindow::on_lineEdit_WisScore_editingFinished()
 {
-  QString score = arg1;
-  QString mod = Braum.calculateAbilityModifier(arg1);
+  QString score = ui->lineEdit_WisScore->text();
+  QString mod = Braum.calculateAbilityModifier(score);
   Braum.setWisdom(score);
   Braum.setWisMod(mod);
 
-  if (&arg1 == QString("")) {
+  if (score == QString("")) {
       ui->lineEdit_WisMod->setText("-5");
     }
   else if (score.toInt() >= 10) {
@@ -1256,14 +1233,14 @@ void MainWindow::on_lineEdit_WisScore_textChanged(const QString &arg1)
     }
 }
 
-void MainWindow::on_lineEdit_ChaScore_textChanged(const QString &arg1)
+void MainWindow::on_lineEdit_ChaScore_editingFinished()
 {
-  QString score = arg1;
-  QString mod = Braum.calculateAbilityModifier(arg1);
+  QString score = ui->lineEdit_ChaScore->text();
+  QString mod = Braum.calculateAbilityModifier(score);
   Braum.setCharisma(score);
   Braum.setChaMod(mod);
 
-  if (&arg1 == QString("")) {
+  if (score == QString("")) {
       ui->lineEdit_ChaMod->setText("-5");
     }
   else if (score.toInt() >= 10) {
@@ -1470,7 +1447,17 @@ void MainWindow::on_pushButton_LoadCharacter_released()
 
 void MainWindow::on_pushButton_ResetCharacter_released()
 {
-    resetCharacterSheet();
+
+    QMessageBox resetBox;
+
+    resetBox.setText("Reset character sheet");
+    resetBox.setInformativeText("Are you sure you want to reset the character sheet?");
+    resetBox.setStandardButtons(QMessageBox::Ok | QMessageBox::Cancel);
+    resetBox.setDefaultButton(QMessageBox::Cancel);
+
+    if (resetBox.exec() == QMessageBox::Ok){
+        resetCharacterSheet();
+    }
 }
 
 // Attack comboBoxes
