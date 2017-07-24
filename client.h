@@ -8,9 +8,11 @@
 class Client
 {
 public:
-    Client(QHostAddress hostIP, quint16 hostPort);
+    Client(QString hostIP, quint16 hostPort);
+    ~Client();
 
 public:
+    QTcpSocket *tcpSocket;
     QString getHostIP();
     void setHostIP();
     quint16 getPort();

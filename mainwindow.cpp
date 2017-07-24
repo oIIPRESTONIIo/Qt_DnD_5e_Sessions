@@ -1,8 +1,12 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "charactersheet.h"
+#include "server.h"
+#include "client.h"
 
 CharacterSheet Braum;
+Client client("localhost", 25565);
+//Server server;
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -1562,19 +1566,13 @@ void MainWindow::on_comboBox_Gov10_activated(const QString &arg1)
     setAttackBonuses();
 }
 
-
 // Networking
 void MainWindow::on_pushButton_HostSession_released()
 {
-    hostSession();
+
 }
 
-void MainWindow::hostSession()
+void MainWindow::on_pushButton_JoinSession_released()
 {
-    QTcpServer server;
-}
-
-void MainWindow::joinSession(){
-
-
+    client.connect();
 }

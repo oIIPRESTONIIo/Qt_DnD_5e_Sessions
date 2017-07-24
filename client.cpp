@@ -1,11 +1,23 @@
 #include "client.h"
 
-Client::Client(QHostAddress hostIP, quint16 hostPort) : m_hostAddress(hostIP), m_hostPort(hostPort)
+Client::Client(QString hostIP, quint16 hostPort) : m_hostAddress(hostIP), m_hostPort(hostPort)
 {
-    QTcpSocket *tcpSocket = new QTcpSocket();
+    tcpSocket = new QTcpSocket();
+}
+
+Client::~Client()
+{
+    qDebug() << "Client destroyed!";
 }
 
 void Client::connect()
 {
     tcpSocket->connectToHost(m_hostAddress, m_hostPort, QIODevice::ReadWrite);
+
+    if(tcpSocket->waitForConnected())
+    {
+
+    } else {
+        qDebug() << "Couldn't Connect";
+    }
 }

@@ -6,12 +6,26 @@
 #include <QString>
 #include <QHostAddress>
 
-class Server
+class Server : public QObject
 {
+
+    Q_OBJECT
 public:
     Server(QHostAddress hostIP, quint16 hostPort);
+    explicit Server(QObject *parent = 0);
+    ~Server();
+
+signals:
+
+public slots:
+    void newConnection();
+
+private:
+    QTcpServer *server;
 
 public:
+    //QTcpServer *server;
+
     QHostAddress getHostAddress();
     void setHostAddress();
     quint16 getHostPort();
@@ -19,6 +33,7 @@ public:
 
     void attemptConnection();
     void connectionAccepted();
+    void readSocket(QTcpSocket *socket);
 
 private:
     QHostAddress m_hostAddress;

@@ -135,6 +135,7 @@ private slots:
 
 
     void on_pushButton_HostSession_released();
+    void on_pushButton_JoinSession_released();
 };
 
 #endif // MAINWINDOW_H
